@@ -1,0 +1,3773 @@
+{
+  "categories": [
+    {
+      "id": "small-chops",
+      "name": "Small Chops",
+      "emoji": "🥟",
+      "accentColour": "#FF6B35",
+      "description": "Perfect for sharing or solo snacking",
+      "products": [
+        {
+          "id": "friends-chops-box",
+          "name": "Friends Chops Box",
+          "tagline": "Perfect for 2-3 people",
+          "description": "Perfect for 2-3 people. Includes 5 samosa, 5 spring rolls, 12 puff puff, 3 peppered beef, 3 peppered gizzard, 1 peppered chicken, Daisy sauce.",
+          "basePrice": 13500,
+          "image": "/cat-small-chops.jpg",
+          "badges": [
+            "Best Seller",
+            "Value for Money"
+          ],
+          "supportsCreateYourPlate": true,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "extra-chicken-cut",
+              "name": "Extra Chicken Cut",
+              "price": 2500
+            },
+            {
+              "id": "extra-puff-puff",
+              "name": "Extra Puff Puff",
+              "price": 1500
+            },
+            {
+              "id": "extra-peppered-beef",
+              "name": "Extra Peppered Beef",
+              "price": 800
+            },
+            {
+              "id": "extra-peppered-gizzard",
+              "name": "Extra Peppered Gizzard",
+              "price": 800
+            },
+            {
+              "id": "extra-samosa",
+              "name": "Extra Samosa",
+              "price": 600
+            },
+            {
+              "id": "extra-spring-roll",
+              "name": "Extra Spring Roll",
+              "price": 500
+            },
+            {
+              "id": "extra-peppered-sauce",
+              "name": "Extra Peppered Sauce",
+              "price": 500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "party-chops-box",
+          "name": "Party Chops Box",
+          "tagline": "For gatherings & game nights",
+          "description": "For gatherings & game nights. Includes 6 samosa, 6 spring rolls, 15 puff puff, 4 peppered beef, 4 peppered gizzard, 1 peppered chicken, Daisy sauce.",
+          "basePrice": 16000,
+          "image": "/cat-small-chops.jpg",
+          "badges": [
+            "Shareable"
+          ],
+          "supportsCreateYourPlate": true,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "extra-chicken-cut",
+              "name": "Extra Chicken Cut",
+              "price": 2500
+            },
+            {
+              "id": "extra-puff-puff",
+              "name": "Extra Puff Puff",
+              "price": 1500
+            },
+            {
+              "id": "extra-peppered-beef",
+              "name": "Extra Peppered Beef",
+              "price": 800
+            },
+            {
+              "id": "extra-peppered-gizzard",
+              "name": "Extra Peppered Gizzard",
+              "price": 800
+            },
+            {
+              "id": "extra-samosa",
+              "name": "Extra Samosa",
+              "price": 600
+            },
+            {
+              "id": "extra-spring-roll",
+              "name": "Extra Spring Roll",
+              "price": 500
+            },
+            {
+              "id": "extra-peppered-sauce",
+              "name": "Extra Peppered Sauce",
+              "price": 500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "celebration-box",
+          "name": "Celebration Box",
+          "tagline": "For gatherings & game nights",
+          "description": "For gatherings & game nights. Includes 4 samosa, 4 spring rolls, 10 puff puff, 3 peppered beef, 2 peppered gizzard, 1 peppered chicken, Daisy sauce.",
+          "basePrice": 11500,
+          "image": "/cat-small-chops.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "extra-chicken-cut",
+              "name": "Extra Chicken Cut",
+              "price": 2500
+            },
+            {
+              "id": "extra-puff-puff",
+              "name": "Extra Puff Puff",
+              "price": 1500
+            },
+            {
+              "id": "extra-peppered-beef",
+              "name": "Extra Peppered Beef",
+              "price": 800
+            },
+            {
+              "id": "extra-peppered-gizzard",
+              "name": "Extra Peppered Gizzard",
+              "price": 800
+            },
+            {
+              "id": "extra-samosa",
+              "name": "Extra Samosa",
+              "price": 600
+            },
+            {
+              "id": "extra-spring-roll",
+              "name": "Extra Spring Roll",
+              "price": 500
+            },
+            {
+              "id": "extra-peppered-sauce",
+              "name": "Extra Peppered Sauce",
+              "price": 500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "family-chops-box",
+          "name": "Family Chops Box",
+          "tagline": "For gatherings & game nights",
+          "description": "For gatherings & game nights. Includes 4 samosa, 4 spring rolls, 8 puff puff, 3 peppered beef, 2 peppered gizzard, Daisy sauce.",
+          "basePrice": 8000,
+          "image": "/cat-small-chops.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "extra-chicken-cut",
+              "name": "Extra Chicken Cut",
+              "price": 2500
+            },
+            {
+              "id": "extra-puff-puff",
+              "name": "Extra Puff Puff",
+              "price": 1500
+            },
+            {
+              "id": "extra-peppered-beef",
+              "name": "Extra Peppered Beef",
+              "price": 800
+            },
+            {
+              "id": "extra-peppered-gizzard",
+              "name": "Extra Peppered Gizzard",
+              "price": 800
+            },
+            {
+              "id": "extra-samosa",
+              "name": "Extra Samosa",
+              "price": 600
+            },
+            {
+              "id": "extra-spring-roll",
+              "name": "Extra Spring Roll",
+              "price": 500
+            },
+            {
+              "id": "extra-peppered-sauce",
+              "name": "Extra Peppered Sauce",
+              "price": 500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "duo-chops-box",
+          "name": "Duo Chops Box",
+          "tagline": "Good for 2",
+          "description": "Good for 2. Includes 3 samosa, 2 spring rolls, 5 puff puff, 1 peppered gizzard, 3 peppered beef, Daisy sauce.",
+          "basePrice": 6500,
+          "image": "/cat-small-chops.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "extra-chicken-cut",
+              "name": "Extra Chicken Cut",
+              "price": 2500
+            },
+            {
+              "id": "extra-puff-puff",
+              "name": "Extra Puff Puff",
+              "price": 1500
+            },
+            {
+              "id": "extra-peppered-beef",
+              "name": "Extra Peppered Beef",
+              "price": 800
+            },
+            {
+              "id": "extra-peppered-gizzard",
+              "name": "Extra Peppered Gizzard",
+              "price": 800
+            },
+            {
+              "id": "extra-samosa",
+              "name": "Extra Samosa",
+              "price": 600
+            },
+            {
+              "id": "extra-spring-roll",
+              "name": "Extra Spring Roll",
+              "price": 500
+            },
+            {
+              "id": "extra-peppered-sauce",
+              "name": "Extra Peppered Sauce",
+              "price": 500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "solo-chops-box",
+          "name": "Solo Chops Box",
+          "tagline": "Light bites",
+          "description": "Light bites. Includes 2 samosa, 2 spring rolls, 3 puff puff, 2 peppered beef, Daisy sauce.",
+          "basePrice": 4500,
+          "image": "/cat-small-chops.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "extra-chicken-cut",
+              "name": "Extra Chicken Cut",
+              "price": 2500
+            },
+            {
+              "id": "extra-puff-puff",
+              "name": "Extra Puff Puff",
+              "price": 1500
+            },
+            {
+              "id": "extra-peppered-beef",
+              "name": "Extra Peppered Beef",
+              "price": 800
+            },
+            {
+              "id": "extra-peppered-gizzard",
+              "name": "Extra Peppered Gizzard",
+              "price": 800
+            },
+            {
+              "id": "extra-samosa",
+              "name": "Extra Samosa",
+              "price": 600
+            },
+            {
+              "id": "extra-spring-roll",
+              "name": "Extra Spring Roll",
+              "price": 500
+            },
+            {
+              "id": "extra-peppered-sauce",
+              "name": "Extra Peppered Sauce",
+              "price": 500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "pasta-rice",
+      "name": "Pasta & Rice",
+      "emoji": "🍝",
+      "accentColour": "#1A7A4A",
+      "description": "Hearty pasta and rice meals",
+      "products": [
+        {
+          "id": "smoky-spaghetti-chicken",
+          "name": "Smoky Spaghetti & Chicken",
+          "tagline": "Spaghetti + chicken + sauce",
+          "description": "Spaghetti + chicken + sauce",
+          "basePrice": 10000,
+          "image": "/cat-pasta-rice.jpg",
+          "badges": [
+            "Most Ordered"
+          ],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "chicken-lap",
+              "name": "Chicken Lap",
+              "price": 5500
+            },
+            {
+              "id": "asun",
+              "name": "Asun",
+              "price": 5000
+            },
+            {
+              "id": "cut-catfish-tail",
+              "name": "Cut Catfish (tail)",
+              "price": 4000
+            },
+            {
+              "id": "cut-catfish-body",
+              "name": "Cut Catfish (body)",
+              "price": 3800
+            },
+            {
+              "id": "titus-fish",
+              "name": "Titus Fish",
+              "price": 3500
+            },
+            {
+              "id": "beef-kebab",
+              "name": "Beef Kebab",
+              "price": 3500
+            },
+            {
+              "id": "vegetable-meat-sauce",
+              "name": "Vegetable Meat Sauce",
+              "price": 7000
+            },
+            {
+              "id": "assorted-meat-sauce",
+              "name": "Assorted Meat Sauce",
+              "price": 5000
+            },
+            {
+              "id": "curry-sauce",
+              "name": "Curry Sauce",
+              "price": 5000
+            },
+            {
+              "id": "stir-fried-veggies",
+              "name": "Stir Fried Veggies",
+              "price": 2000
+            },
+            {
+              "id": "veggie-fried-egg",
+              "name": "Veggie Fried Egg",
+              "price": 2000
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw",
+              "price": 1500
+            },
+            {
+              "id": "fried-plantain",
+              "name": "Fried Plantain",
+              "price": 1000
+            },
+            {
+              "id": "boiled-egg",
+              "name": "Boiled Egg",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "fried-rice-chicken",
+          "name": "Fried Rice & Chicken",
+          "tagline": "Fried rice + chicken + coleslaw",
+          "description": "Fried rice + chicken + coleslaw",
+          "basePrice": 10000,
+          "image": "/cat-pasta-rice.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "chicken-lap",
+              "name": "Chicken Lap",
+              "price": 5500
+            },
+            {
+              "id": "asun",
+              "name": "Asun",
+              "price": 5000
+            },
+            {
+              "id": "cut-catfish-tail",
+              "name": "Cut Catfish (tail)",
+              "price": 4000
+            },
+            {
+              "id": "cut-catfish-body",
+              "name": "Cut Catfish (body)",
+              "price": 3800
+            },
+            {
+              "id": "titus-fish",
+              "name": "Titus Fish",
+              "price": 3500
+            },
+            {
+              "id": "beef-kebab",
+              "name": "Beef Kebab",
+              "price": 3500
+            },
+            {
+              "id": "vegetable-meat-sauce",
+              "name": "Vegetable Meat Sauce",
+              "price": 7000
+            },
+            {
+              "id": "assorted-meat-sauce",
+              "name": "Assorted Meat Sauce",
+              "price": 5000
+            },
+            {
+              "id": "curry-sauce",
+              "name": "Curry Sauce",
+              "price": 5000
+            },
+            {
+              "id": "stir-fried-veggies",
+              "name": "Stir Fried Veggies",
+              "price": 2000
+            },
+            {
+              "id": "veggie-fried-egg",
+              "name": "Veggie Fried Egg",
+              "price": 2000
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw",
+              "price": 1500
+            },
+            {
+              "id": "fried-plantain",
+              "name": "Fried Plantain",
+              "price": 1000
+            },
+            {
+              "id": "boiled-egg",
+              "name": "Boiled Egg",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "singapore-noodles-beef-kebab",
+          "name": "Singapore Noodles & Beef Kebab",
+          "tagline": "Singapore noodles + beef kebab + chilli sauce",
+          "description": "Singapore noodles + beef kebab + chilli sauce",
+          "basePrice": 9800,
+          "image": "/cat-pasta-rice.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "chicken-lap",
+              "name": "Chicken Lap",
+              "price": 5500
+            },
+            {
+              "id": "asun",
+              "name": "Asun",
+              "price": 5000
+            },
+            {
+              "id": "cut-catfish-tail",
+              "name": "Cut Catfish (tail)",
+              "price": 4000
+            },
+            {
+              "id": "cut-catfish-body",
+              "name": "Cut Catfish (body)",
+              "price": 3800
+            },
+            {
+              "id": "titus-fish",
+              "name": "Titus Fish",
+              "price": 3500
+            },
+            {
+              "id": "beef-kebab",
+              "name": "Beef Kebab",
+              "price": 3500
+            },
+            {
+              "id": "vegetable-meat-sauce",
+              "name": "Vegetable Meat Sauce",
+              "price": 7000
+            },
+            {
+              "id": "assorted-meat-sauce",
+              "name": "Assorted Meat Sauce",
+              "price": 5000
+            },
+            {
+              "id": "curry-sauce",
+              "name": "Curry Sauce",
+              "price": 5000
+            },
+            {
+              "id": "stir-fried-veggies",
+              "name": "Stir Fried Veggies",
+              "price": 2000
+            },
+            {
+              "id": "veggie-fried-egg",
+              "name": "Veggie Fried Egg",
+              "price": 2000
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw",
+              "price": 1500
+            },
+            {
+              "id": "fried-plantain",
+              "name": "Fried Plantain",
+              "price": 1000
+            },
+            {
+              "id": "boiled-egg",
+              "name": "Boiled Egg",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "singapore-noodles",
+          "name": "Singapore Noodles",
+          "tagline": "Stir-fried Singapore-style noodles",
+          "description": "Stir-fried Singapore-style noodles",
+          "basePrice": 5000,
+          "image": "/cat-pasta-rice.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "chicken-lap",
+              "name": "Chicken Lap",
+              "price": 5500
+            },
+            {
+              "id": "asun",
+              "name": "Asun",
+              "price": 5000
+            },
+            {
+              "id": "cut-catfish-tail",
+              "name": "Cut Catfish (tail)",
+              "price": 4000
+            },
+            {
+              "id": "cut-catfish-body",
+              "name": "Cut Catfish (body)",
+              "price": 3800
+            },
+            {
+              "id": "titus-fish",
+              "name": "Titus Fish",
+              "price": 3500
+            },
+            {
+              "id": "beef-kebab",
+              "name": "Beef Kebab",
+              "price": 3500
+            },
+            {
+              "id": "vegetable-meat-sauce",
+              "name": "Vegetable Meat Sauce",
+              "price": 7000
+            },
+            {
+              "id": "assorted-meat-sauce",
+              "name": "Assorted Meat Sauce",
+              "price": 5000
+            },
+            {
+              "id": "curry-sauce",
+              "name": "Curry Sauce",
+              "price": 5000
+            },
+            {
+              "id": "stir-fried-veggies",
+              "name": "Stir Fried Veggies",
+              "price": 2000
+            },
+            {
+              "id": "veggie-fried-egg",
+              "name": "Veggie Fried Egg",
+              "price": 2000
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw",
+              "price": 1500
+            },
+            {
+              "id": "fried-plantain",
+              "name": "Fried Plantain",
+              "price": 1000
+            },
+            {
+              "id": "boiled-egg",
+              "name": "Boiled Egg",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "penne",
+          "name": "Penne",
+          "tagline": "Penne pasta, your choice of sauce",
+          "description": "Penne pasta, your choice of sauce",
+          "basePrice": 5000,
+          "image": "/cat-pasta-rice.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "chicken-lap",
+              "name": "Chicken Lap",
+              "price": 5500
+            },
+            {
+              "id": "asun",
+              "name": "Asun",
+              "price": 5000
+            },
+            {
+              "id": "cut-catfish-tail",
+              "name": "Cut Catfish (tail)",
+              "price": 4000
+            },
+            {
+              "id": "cut-catfish-body",
+              "name": "Cut Catfish (body)",
+              "price": 3800
+            },
+            {
+              "id": "titus-fish",
+              "name": "Titus Fish",
+              "price": 3500
+            },
+            {
+              "id": "beef-kebab",
+              "name": "Beef Kebab",
+              "price": 3500
+            },
+            {
+              "id": "vegetable-meat-sauce",
+              "name": "Vegetable Meat Sauce",
+              "price": 7000
+            },
+            {
+              "id": "assorted-meat-sauce",
+              "name": "Assorted Meat Sauce",
+              "price": 5000
+            },
+            {
+              "id": "curry-sauce",
+              "name": "Curry Sauce",
+              "price": 5000
+            },
+            {
+              "id": "stir-fried-veggies",
+              "name": "Stir Fried Veggies",
+              "price": 2000
+            },
+            {
+              "id": "veggie-fried-egg",
+              "name": "Veggie Fried Egg",
+              "price": 2000
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw",
+              "price": 1500
+            },
+            {
+              "id": "fried-plantain",
+              "name": "Fried Plantain",
+              "price": 1000
+            },
+            {
+              "id": "boiled-egg",
+              "name": "Boiled Egg",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "spaghetti",
+          "name": "Spaghetti",
+          "tagline": "Classic spaghetti, your choice of sauce",
+          "description": "Classic spaghetti, your choice of sauce",
+          "basePrice": 3800,
+          "image": "/cat-pasta-rice.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "chicken-lap",
+              "name": "Chicken Lap",
+              "price": 5500
+            },
+            {
+              "id": "asun",
+              "name": "Asun",
+              "price": 5000
+            },
+            {
+              "id": "cut-catfish-tail",
+              "name": "Cut Catfish (tail)",
+              "price": 4000
+            },
+            {
+              "id": "cut-catfish-body",
+              "name": "Cut Catfish (body)",
+              "price": 3800
+            },
+            {
+              "id": "titus-fish",
+              "name": "Titus Fish",
+              "price": 3500
+            },
+            {
+              "id": "beef-kebab",
+              "name": "Beef Kebab",
+              "price": 3500
+            },
+            {
+              "id": "vegetable-meat-sauce",
+              "name": "Vegetable Meat Sauce",
+              "price": 7000
+            },
+            {
+              "id": "assorted-meat-sauce",
+              "name": "Assorted Meat Sauce",
+              "price": 5000
+            },
+            {
+              "id": "curry-sauce",
+              "name": "Curry Sauce",
+              "price": 5000
+            },
+            {
+              "id": "stir-fried-veggies",
+              "name": "Stir Fried Veggies",
+              "price": 2000
+            },
+            {
+              "id": "veggie-fried-egg",
+              "name": "Veggie Fried Egg",
+              "price": 2000
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw",
+              "price": 1500
+            },
+            {
+              "id": "fried-plantain",
+              "name": "Fried Plantain",
+              "price": 1000
+            },
+            {
+              "id": "boiled-egg",
+              "name": "Boiled Egg",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "macaroni",
+          "name": "Macaroni",
+          "tagline": "Macaroni, your choice of sauce",
+          "description": "Macaroni, your choice of sauce",
+          "basePrice": 3500,
+          "image": "/cat-pasta-rice.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "chicken-lap",
+              "name": "Chicken Lap",
+              "price": 5500
+            },
+            {
+              "id": "asun",
+              "name": "Asun",
+              "price": 5000
+            },
+            {
+              "id": "cut-catfish-tail",
+              "name": "Cut Catfish (tail)",
+              "price": 4000
+            },
+            {
+              "id": "cut-catfish-body",
+              "name": "Cut Catfish (body)",
+              "price": 3800
+            },
+            {
+              "id": "titus-fish",
+              "name": "Titus Fish",
+              "price": 3500
+            },
+            {
+              "id": "beef-kebab",
+              "name": "Beef Kebab",
+              "price": 3500
+            },
+            {
+              "id": "vegetable-meat-sauce",
+              "name": "Vegetable Meat Sauce",
+              "price": 7000
+            },
+            {
+              "id": "assorted-meat-sauce",
+              "name": "Assorted Meat Sauce",
+              "price": 5000
+            },
+            {
+              "id": "curry-sauce",
+              "name": "Curry Sauce",
+              "price": 5000
+            },
+            {
+              "id": "stir-fried-veggies",
+              "name": "Stir Fried Veggies",
+              "price": 2000
+            },
+            {
+              "id": "veggie-fried-egg",
+              "name": "Veggie Fried Egg",
+              "price": 2000
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw",
+              "price": 1500
+            },
+            {
+              "id": "fried-plantain",
+              "name": "Fried Plantain",
+              "price": 1000
+            },
+            {
+              "id": "boiled-egg",
+              "name": "Boiled Egg",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "dirty-rice-basmati",
+          "name": "Dirty Rice (Basmati)",
+          "tagline": "Seasoned basmati dirty rice",
+          "description": "Seasoned basmati dirty rice",
+          "basePrice": 5000,
+          "image": "/cat-pasta-rice.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "chicken-lap",
+              "name": "Chicken Lap",
+              "price": 5500
+            },
+            {
+              "id": "asun",
+              "name": "Asun",
+              "price": 5000
+            },
+            {
+              "id": "cut-catfish-tail",
+              "name": "Cut Catfish (tail)",
+              "price": 4000
+            },
+            {
+              "id": "cut-catfish-body",
+              "name": "Cut Catfish (body)",
+              "price": 3800
+            },
+            {
+              "id": "titus-fish",
+              "name": "Titus Fish",
+              "price": 3500
+            },
+            {
+              "id": "beef-kebab",
+              "name": "Beef Kebab",
+              "price": 3500
+            },
+            {
+              "id": "vegetable-meat-sauce",
+              "name": "Vegetable Meat Sauce",
+              "price": 7000
+            },
+            {
+              "id": "assorted-meat-sauce",
+              "name": "Assorted Meat Sauce",
+              "price": 5000
+            },
+            {
+              "id": "curry-sauce",
+              "name": "Curry Sauce",
+              "price": 5000
+            },
+            {
+              "id": "stir-fried-veggies",
+              "name": "Stir Fried Veggies",
+              "price": 2000
+            },
+            {
+              "id": "veggie-fried-egg",
+              "name": "Veggie Fried Egg",
+              "price": 2000
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw",
+              "price": 1500
+            },
+            {
+              "id": "fried-plantain",
+              "name": "Fried Plantain",
+              "price": 1000
+            },
+            {
+              "id": "boiled-egg",
+              "name": "Boiled Egg",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "fried-rice",
+          "name": "Fried Rice",
+          "tagline": "Classic Nigerian fried rice",
+          "description": "Classic Nigerian fried rice",
+          "basePrice": 3800,
+          "image": "/cat-pasta-rice.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "chicken-lap",
+              "name": "Chicken Lap",
+              "price": 5500
+            },
+            {
+              "id": "asun",
+              "name": "Asun",
+              "price": 5000
+            },
+            {
+              "id": "cut-catfish-tail",
+              "name": "Cut Catfish (tail)",
+              "price": 4000
+            },
+            {
+              "id": "cut-catfish-body",
+              "name": "Cut Catfish (body)",
+              "price": 3800
+            },
+            {
+              "id": "titus-fish",
+              "name": "Titus Fish",
+              "price": 3500
+            },
+            {
+              "id": "beef-kebab",
+              "name": "Beef Kebab",
+              "price": 3500
+            },
+            {
+              "id": "vegetable-meat-sauce",
+              "name": "Vegetable Meat Sauce",
+              "price": 7000
+            },
+            {
+              "id": "assorted-meat-sauce",
+              "name": "Assorted Meat Sauce",
+              "price": 5000
+            },
+            {
+              "id": "curry-sauce",
+              "name": "Curry Sauce",
+              "price": 5000
+            },
+            {
+              "id": "stir-fried-veggies",
+              "name": "Stir Fried Veggies",
+              "price": 2000
+            },
+            {
+              "id": "veggie-fried-egg",
+              "name": "Veggie Fried Egg",
+              "price": 2000
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw",
+              "price": 1500
+            },
+            {
+              "id": "fried-plantain",
+              "name": "Fried Plantain",
+              "price": 1000
+            },
+            {
+              "id": "boiled-egg",
+              "name": "Boiled Egg",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "jollof-rice",
+          "name": "Jollof Rice",
+          "tagline": "Signature smoky jollof rice",
+          "description": "Signature smoky jollof rice",
+          "basePrice": 3500,
+          "image": "/cat-pasta-rice.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "chicken-lap",
+              "name": "Chicken Lap",
+              "price": 5500
+            },
+            {
+              "id": "asun",
+              "name": "Asun",
+              "price": 5000
+            },
+            {
+              "id": "cut-catfish-tail",
+              "name": "Cut Catfish (tail)",
+              "price": 4000
+            },
+            {
+              "id": "cut-catfish-body",
+              "name": "Cut Catfish (body)",
+              "price": 3800
+            },
+            {
+              "id": "titus-fish",
+              "name": "Titus Fish",
+              "price": 3500
+            },
+            {
+              "id": "beef-kebab",
+              "name": "Beef Kebab",
+              "price": 3500
+            },
+            {
+              "id": "vegetable-meat-sauce",
+              "name": "Vegetable Meat Sauce",
+              "price": 7000
+            },
+            {
+              "id": "assorted-meat-sauce",
+              "name": "Assorted Meat Sauce",
+              "price": 5000
+            },
+            {
+              "id": "curry-sauce",
+              "name": "Curry Sauce",
+              "price": 5000
+            },
+            {
+              "id": "stir-fried-veggies",
+              "name": "Stir Fried Veggies",
+              "price": 2000
+            },
+            {
+              "id": "veggie-fried-egg",
+              "name": "Veggie Fried Egg",
+              "price": 2000
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw",
+              "price": 1500
+            },
+            {
+              "id": "fried-plantain",
+              "name": "Fried Plantain",
+              "price": 1000
+            },
+            {
+              "id": "boiled-egg",
+              "name": "Boiled Egg",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "white-rice",
+          "name": "White Rice",
+          "tagline": "Plain white rice, pair with a sauce",
+          "description": "Plain white rice, pair with a sauce",
+          "basePrice": 2000,
+          "image": "/cat-pasta-rice.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "price": 7500
+            },
+            {
+              "id": "chicken-lap",
+              "name": "Chicken Lap",
+              "price": 5500
+            },
+            {
+              "id": "asun",
+              "name": "Asun",
+              "price": 5000
+            },
+            {
+              "id": "cut-catfish-tail",
+              "name": "Cut Catfish (tail)",
+              "price": 4000
+            },
+            {
+              "id": "cut-catfish-body",
+              "name": "Cut Catfish (body)",
+              "price": 3800
+            },
+            {
+              "id": "titus-fish",
+              "name": "Titus Fish",
+              "price": 3500
+            },
+            {
+              "id": "beef-kebab",
+              "name": "Beef Kebab",
+              "price": 3500
+            },
+            {
+              "id": "vegetable-meat-sauce",
+              "name": "Vegetable Meat Sauce",
+              "price": 7000
+            },
+            {
+              "id": "assorted-meat-sauce",
+              "name": "Assorted Meat Sauce",
+              "price": 5000
+            },
+            {
+              "id": "curry-sauce",
+              "name": "Curry Sauce",
+              "price": 5000
+            },
+            {
+              "id": "stir-fried-veggies",
+              "name": "Stir Fried Veggies",
+              "price": 2000
+            },
+            {
+              "id": "veggie-fried-egg",
+              "name": "Veggie Fried Egg",
+              "price": 2000
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw",
+              "price": 1500
+            },
+            {
+              "id": "fried-plantain",
+              "name": "Fried Plantain",
+              "price": 1000
+            },
+            {
+              "id": "boiled-egg",
+              "name": "Boiled Egg",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "emoji": "🍕",
+      "accentColour": "#C0392B",
+      "description": "Signature and classic wood-fired pizzas",
+      "products": [
+        {
+          "id": "pizza-feast-box",
+          "name": "Pizza Feast Box",
+          "tagline": "Medium pizza + fries + 10 crunchy wings + cream & ketchup",
+          "description": "Medium pizza + fries + 10 crunchy wings + cream & ketchup",
+          "basePrice": 18500,
+          "image": "/cat-pizza.jpg",
+          "badges": [
+            "Most Ordered"
+          ],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-fries-+-drink",
+              "name": "Add Fries + Drink",
+              "price": 3500
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 2500
+            },
+            {
+              "id": "add-chicken",
+              "name": "Add Chicken",
+              "price": 2500
+            },
+            {
+              "id": "add-beef",
+              "name": "Add Beef",
+              "price": 2000
+            },
+            {
+              "id": "add-sausage-topping",
+              "name": "Add Sausage Topping",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "pizza-wings-deal",
+          "name": "Pizza & Wings Deal",
+          "tagline": "Medium pizza + fries + 4 crunchy wings + 5 mini rolls",
+          "description": "Medium pizza + fries + 4 crunchy wings + 5 mini rolls",
+          "basePrice": 18500,
+          "image": "/cat-pizza.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-fries-+-drink",
+              "name": "Add Fries + Drink",
+              "price": 3500
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 2500
+            },
+            {
+              "id": "add-chicken",
+              "name": "Add Chicken",
+              "price": 2500
+            },
+            {
+              "id": "add-beef",
+              "name": "Add Beef",
+              "price": 2000
+            },
+            {
+              "id": "add-sausage-topping",
+              "name": "Add Sausage Topping",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "pizza-party-box",
+          "name": "Pizza Party Box",
+          "tagline": "Triangle pizza + fries + 4 wings + 2 samosa + 2 spring rolls",
+          "description": "Triangle pizza + fries + 4 wings + 2 samosa + 2 spring rolls",
+          "basePrice": 18500,
+          "image": "/cat-pizza.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-fries-+-drink",
+              "name": "Add Fries + Drink",
+              "price": 3500
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 2500
+            },
+            {
+              "id": "add-chicken",
+              "name": "Add Chicken",
+              "price": 2500
+            },
+            {
+              "id": "add-beef",
+              "name": "Add Beef",
+              "price": 2000
+            },
+            {
+              "id": "add-sausage-topping",
+              "name": "Add Sausage Topping",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "suya-chicken-pizza",
+          "name": "Suya Chicken Pizza",
+          "tagline": "Smoky suya-spiced chicken pizza",
+          "description": "Smoky suya-spiced chicken pizza",
+          "basePrice": 8700,
+          "image": "/cat-pizza.jpg",
+          "badges": [
+            "Best Seller"
+          ],
+          "supportsCreateYourPlate": true,
+          "hasVariants": true,
+          "variants": [
+            {
+              "name": "Medium",
+              "priceModifier": 0
+            },
+            {
+              "name": "Large",
+              "priceModifier": 5100
+            }
+          ],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Original",
+            "Extra Spicy",
+            "BBQ Drizzle",
+            "Garlic Cream"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-fries-+-drink",
+              "name": "Add Fries + Drink",
+              "price": 3500
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 2500
+            },
+            {
+              "id": "add-chicken",
+              "name": "Add Chicken",
+              "price": 2500
+            },
+            {
+              "id": "add-beef",
+              "name": "Add Beef",
+              "price": 2000
+            },
+            {
+              "id": "add-sausage-topping",
+              "name": "Add Sausage Topping",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "beef-chicken-supreme",
+          "name": "Beef & Chicken Supreme",
+          "tagline": "Loaded beef and chicken supreme pizza",
+          "description": "Loaded beef and chicken supreme pizza",
+          "basePrice": 8700,
+          "image": "/cat-pizza.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": true,
+          "variants": [
+            {
+              "name": "Medium",
+              "priceModifier": 0
+            },
+            {
+              "name": "Large",
+              "priceModifier": 5800
+            }
+          ],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Original",
+            "Extra Spicy",
+            "BBQ Drizzle",
+            "Garlic Cream"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-fries-+-drink",
+              "name": "Add Fries + Drink",
+              "price": 3500
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 2500
+            },
+            {
+              "id": "add-chicken",
+              "name": "Add Chicken",
+              "price": 2500
+            },
+            {
+              "id": "add-beef",
+              "name": "Add Beef",
+              "price": 2000
+            },
+            {
+              "id": "add-sausage-topping",
+              "name": "Add Sausage Topping",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "suya-beef-pizza",
+          "name": "Suya Beef Pizza",
+          "tagline": "Smoky suya-spiced beef pizza",
+          "description": "Smoky suya-spiced beef pizza",
+          "basePrice": 7500,
+          "image": "/cat-pizza.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": true,
+          "variants": [
+            {
+              "name": "Medium",
+              "priceModifier": 0
+            },
+            {
+              "name": "Large",
+              "priceModifier": 5300
+            }
+          ],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Original",
+            "Extra Spicy",
+            "BBQ Drizzle",
+            "Garlic Cream"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-fries-+-drink",
+              "name": "Add Fries + Drink",
+              "price": 3500
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 2500
+            },
+            {
+              "id": "add-chicken",
+              "name": "Add Chicken",
+              "price": 2500
+            },
+            {
+              "id": "add-beef",
+              "name": "Add Beef",
+              "price": 2000
+            },
+            {
+              "id": "add-sausage-topping",
+              "name": "Add Sausage Topping",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "classic-chicken-pizza",
+          "name": "Classic Chicken Pizza",
+          "tagline": "Classic chicken pizza",
+          "description": "Classic chicken pizza",
+          "basePrice": 8000,
+          "image": "/cat-pizza.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": true,
+          "variants": [
+            {
+              "name": "Medium",
+              "priceModifier": 0
+            },
+            {
+              "name": "Large",
+              "priceModifier": 5000
+            }
+          ],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Original",
+            "Extra Spicy",
+            "BBQ Drizzle",
+            "Garlic Cream"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-fries-+-drink",
+              "name": "Add Fries + Drink",
+              "price": 3500
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 2500
+            },
+            {
+              "id": "add-chicken",
+              "name": "Add Chicken",
+              "price": 2500
+            },
+            {
+              "id": "add-beef",
+              "name": "Add Beef",
+              "price": 2000
+            },
+            {
+              "id": "add-sausage-topping",
+              "name": "Add Sausage Topping",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "classic-beef-pizza",
+          "name": "Classic Beef Pizza",
+          "tagline": "Classic beef pizza",
+          "description": "Classic beef pizza",
+          "basePrice": 7000,
+          "image": "/cat-pizza.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": true,
+          "variants": [
+            {
+              "name": "Medium",
+              "priceModifier": 0
+            },
+            {
+              "name": "Large",
+              "priceModifier": 5500
+            }
+          ],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Original",
+            "Extra Spicy",
+            "BBQ Drizzle",
+            "Garlic Cream"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-fries-+-drink",
+              "name": "Add Fries + Drink",
+              "price": 3500
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 2500
+            },
+            {
+              "id": "add-chicken",
+              "name": "Add Chicken",
+              "price": 2500
+            },
+            {
+              "id": "add-beef",
+              "name": "Add Beef",
+              "price": 2000
+            },
+            {
+              "id": "add-sausage-topping",
+              "name": "Add Sausage Topping",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "sausage-crust-pizza",
+          "name": "Sausage Crust Pizza",
+          "tagline": "Stuffed crust, extra cheese, Large only",
+          "description": "Stuffed crust, extra cheese, Large only",
+          "basePrice": 17500,
+          "image": "/cat-pizza.jpg",
+          "badges": [
+            "Chef's Special"
+          ],
+          "supportsCreateYourPlate": true,
+          "hasVariants": true,
+          "variants": [
+            {
+              "name": "Large",
+              "priceModifier": 0
+            }
+          ],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Original",
+            "Extra Spicy",
+            "BBQ Drizzle",
+            "Garlic Cream"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-fries-+-drink",
+              "name": "Add Fries + Drink",
+              "price": 3500
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 2500
+            },
+            {
+              "id": "add-chicken",
+              "name": "Add Chicken",
+              "price": 2500
+            },
+            {
+              "id": "add-beef",
+              "name": "Add Beef",
+              "price": 2000
+            },
+            {
+              "id": "add-sausage-topping",
+              "name": "Add Sausage Topping",
+              "price": 1000
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "dine-with-me",
+      "name": "Dine With Me Boxes",
+      "emoji": "🎁",
+      "accentColour": "#F5C518",
+      "description": "Big sharing boxes for friends and family",
+      "products": [
+        {
+          "id": "friends-dine-with-me-box",
+          "name": "Friends Dine-With-Me Box",
+          "tagline": "Perfect for 2-3 people: beef burger, chicken burger, 5 samosas, 5 spring rolls, 2 sausages, sauced chicken",
+          "description": "Perfect for 2-3 people: beef burger, chicken burger, 5 samosas, 5 spring rolls, 2 sausages, sauced chicken",
+          "basePrice": 19500,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [
+            "Most Ordered"
+          ],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-shawarma",
+              "name": "Add Shawarma",
+              "price": 4000
+            },
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-extra-burger",
+              "name": "Add Extra Burger",
+              "price": 3800
+            },
+            {
+              "id": "add-hotdog",
+              "name": "Add Hotdog",
+              "price": 3800
+            },
+            {
+              "id": "add-extra-sausage",
+              "name": "Add Extra Sausage",
+              "price": 800
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "ultimate-party-box",
+          "name": "Ultimate Party Box",
+          "tagline": "For serious sharing: 2 burgers, 2 hotdogs or shawarma, chips, 2 drumsticks, 2 sausages, sauces",
+          "description": "For serious sharing: 2 burgers, 2 hotdogs or shawarma, chips, 2 drumsticks, 2 sausages, sauces",
+          "basePrice": 23500,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-shawarma",
+              "name": "Add Shawarma",
+              "price": 4000
+            },
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-extra-burger",
+              "name": "Add Extra Burger",
+              "price": 3800
+            },
+            {
+              "id": "add-hotdog",
+              "name": "Add Hotdog",
+              "price": 3800
+            },
+            {
+              "id": "add-extra-sausage",
+              "name": "Add Extra Sausage",
+              "price": 800
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "premium-mix-box",
+          "name": "Premium Mix Box",
+          "tagline": "Balanced & loaded: beef burger, beef & sausage shawarma, sauced chicken wings, chips, sausage, 2 samosas, 2 spring rolls",
+          "description": "Balanced & loaded: beef burger, beef & sausage shawarma, sauced chicken wings, chips, sausage, 2 samosas, 2 spring rolls",
+          "basePrice": 21000,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-shawarma",
+              "name": "Add Shawarma",
+              "price": 4000
+            },
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-extra-burger",
+              "name": "Add Extra Burger",
+              "price": 3800
+            },
+            {
+              "id": "add-hotdog",
+              "name": "Add Hotdog",
+              "price": 3800
+            },
+            {
+              "id": "add-extra-sausage",
+              "name": "Add Extra Sausage",
+              "price": 800
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "hangout-burger-box",
+          "name": "Hangout Burger Box",
+          "tagline": "Burger lovers' choice: chicken burger, beef burger, beef hotdog, sauced chicken, chips, 2 sausages, ketchup",
+          "description": "Burger lovers' choice: chicken burger, beef burger, beef hotdog, sauced chicken, chips, 2 sausages, ketchup",
+          "basePrice": 20000,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-shawarma",
+              "name": "Add Shawarma",
+              "price": 4000
+            },
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-extra-burger",
+              "name": "Add Extra Burger",
+              "price": 3800
+            },
+            {
+              "id": "add-hotdog",
+              "name": "Add Hotdog",
+              "price": 3800
+            },
+            {
+              "id": "add-extra-sausage",
+              "name": "Add Extra Sausage",
+              "price": 800
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "mixed-grill-box",
+          "name": "Mixed Grill Box",
+          "tagline": "Burger + shawarma balance: burger, beef hotdog, chips, 10 wings, ketchup, cream",
+          "description": "Burger + shawarma balance: burger, beef hotdog, chips, 10 wings, ketchup, cream",
+          "basePrice": 18500,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-shawarma",
+              "name": "Add Shawarma",
+              "price": 4000
+            },
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-extra-burger",
+              "name": "Add Extra Burger",
+              "price": 3800
+            },
+            {
+              "id": "add-hotdog",
+              "name": "Add Hotdog",
+              "price": 3800
+            },
+            {
+              "id": "add-extra-sausage",
+              "name": "Add Extra Sausage",
+              "price": 800
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "couple-mini-box",
+          "name": "Couple Mini Box",
+          "tagline": "Light sharing: beef burger, chicken burger, 2 mini shawarma, chips, ketchup",
+          "description": "Light sharing: beef burger, chicken burger, 2 mini shawarma, chips, ketchup",
+          "basePrice": 14800,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "add-shawarma",
+              "name": "Add Shawarma",
+              "price": 4000
+            },
+            {
+              "id": "add-4-crunchy-wings",
+              "name": "Add 4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "add-extra-burger",
+              "name": "Add Extra Burger",
+              "price": 3800
+            },
+            {
+              "id": "add-hotdog",
+              "name": "Add Hotdog",
+              "price": 3800
+            },
+            {
+              "id": "add-extra-sausage",
+              "name": "Add Extra Sausage",
+              "price": 800
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Parfait",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "loaded-fries",
+      "name": "Loaded Fries",
+      "emoji": "🍟",
+      "accentColour": "#FF6B35",
+      "description": "Crispy fries, premium toppings, maximum satisfaction",
+      "products": [
+        {
+          "id": "special-loaded-fries",
+          "name": "Special Loaded Fries",
+          "tagline": "Sauced beef + sauced chicken + chips + sausage + cheese",
+          "description": "Sauced beef + sauced chicken + chips + sausage + cheese",
+          "basePrice": 10500,
+          "image": "/cat-loaded-fries.jpg",
+          "badges": [
+            "Best Seller"
+          ],
+          "supportsCreateYourPlate": true,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "Spicy",
+            "BBQ"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 500
+            },
+            {
+              "id": "extra-sauce",
+              "name": "Extra Sauce",
+              "price": 300
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "mixed-loaded-fries",
+          "name": "Mixed Loaded Fries",
+          "tagline": "Sauced beef + sauced chicken + chips + cheese",
+          "description": "Sauced beef + sauced chicken + chips + cheese",
+          "basePrice": 10000,
+          "image": "/cat-loaded-fries.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "Spicy",
+            "BBQ"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 500
+            },
+            {
+              "id": "extra-sauce",
+              "name": "Extra Sauce",
+              "price": 300
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "regular-beef-loaded-fries",
+          "name": "Regular Beef Loaded Fries",
+          "tagline": "Beef + chips + cheese",
+          "description": "Beef + chips + cheese",
+          "basePrice": 9500,
+          "image": "/cat-loaded-fries.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "Spicy",
+            "BBQ"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 500
+            },
+            {
+              "id": "extra-sauce",
+              "name": "Extra Sauce",
+              "price": 300
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "regular-chicken-loaded-fries",
+          "name": "Regular Chicken Loaded Fries",
+          "tagline": "Chicken + chips + cheese",
+          "description": "Chicken + chips + cheese",
+          "basePrice": 10000,
+          "image": "/cat-loaded-fries.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "Spicy",
+            "BBQ"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 500
+            },
+            {
+              "id": "extra-sauce",
+              "name": "Extra Sauce",
+              "price": 300
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "shawarma",
+      "name": "Shawarma",
+      "emoji": "🌯",
+      "accentColour": "#C0392B",
+      "description": "Loaded wraps made fresh to order",
+      "products": [
+        {
+          "id": "large-shawarma",
+          "name": "Large Shawarma",
+          "tagline": "Extra filling, more protein, perfect for a big eater",
+          "description": "Extra filling, more protein, perfect for a big eater",
+          "basePrice": 7500,
+          "image": "/cat-shawarma.jpg",
+          "badges": [
+            "Best Seller"
+          ],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Spicy",
+            "Extra Creamy",
+            "Extra Spicy"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-meaty",
+              "name": "Extra Meaty",
+              "price": 1500
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "extra-creamy",
+              "name": "Extra Creamy",
+              "price": 500
+            },
+            {
+              "id": "extra-spicy",
+              "name": "Extra Spicy",
+              "price": 300
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "extra-meaty-1",
+          "name": "Extra Meaty 1",
+          "tagline": "Beef + Chicken + 2 Sausages",
+          "description": "Beef + Chicken + 2 Sausages",
+          "basePrice": 6200,
+          "image": "/cat-shawarma.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Spicy",
+            "Extra Creamy",
+            "Extra Spicy"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-meaty",
+              "name": "Extra Meaty",
+              "price": 1500
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "extra-creamy",
+              "name": "Extra Creamy",
+              "price": 500
+            },
+            {
+              "id": "extra-spicy",
+              "name": "Extra Spicy",
+              "price": 300
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "extra-meaty-2",
+          "name": "Extra Meaty 2",
+          "tagline": "Beef + Chicken + 1 Sausage",
+          "description": "Beef + Chicken + 1 Sausage",
+          "basePrice": 5900,
+          "image": "/cat-shawarma.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Spicy",
+            "Extra Creamy",
+            "Extra Spicy"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-meaty",
+              "name": "Extra Meaty",
+              "price": 1500
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "extra-creamy",
+              "name": "Extra Creamy",
+              "price": 500
+            },
+            {
+              "id": "extra-spicy",
+              "name": "Extra Spicy",
+              "price": 300
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "chicken-sausage-shawarma",
+          "name": "Chicken & Sausage",
+          "tagline": "Chicken and sausage shawarma",
+          "description": "Chicken and sausage shawarma",
+          "basePrice": 4900,
+          "image": "/cat-shawarma.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Spicy",
+            "Extra Creamy",
+            "Extra Spicy"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-meaty",
+              "name": "Extra Meaty",
+              "price": 1500
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "extra-creamy",
+              "name": "Extra Creamy",
+              "price": 500
+            },
+            {
+              "id": "extra-spicy",
+              "name": "Extra Spicy",
+              "price": 300
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "beef-sausage-shawarma",
+          "name": "Beef & Sausage",
+          "tagline": "Beef and sausage shawarma",
+          "description": "Beef and sausage shawarma",
+          "basePrice": 4700,
+          "image": "/cat-shawarma.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Spicy",
+            "Extra Creamy",
+            "Extra Spicy"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-meaty",
+              "name": "Extra Meaty",
+              "price": 1500
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "extra-creamy",
+              "name": "Extra Creamy",
+              "price": 500
+            },
+            {
+              "id": "extra-spicy",
+              "name": "Extra Spicy",
+              "price": 300
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "only-chicken-shawarma",
+          "name": "Only Chicken",
+          "tagline": "Chicken shawarma",
+          "description": "Chicken shawarma",
+          "basePrice": 4500,
+          "image": "/cat-shawarma.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Spicy",
+            "Extra Creamy",
+            "Extra Spicy"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-meaty",
+              "name": "Extra Meaty",
+              "price": 1500
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "extra-creamy",
+              "name": "Extra Creamy",
+              "price": 500
+            },
+            {
+              "id": "extra-spicy",
+              "name": "Extra Spicy",
+              "price": 300
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "only-beef-shawarma",
+          "name": "Only Beef",
+          "tagline": "Beef shawarma",
+          "description": "Beef shawarma",
+          "basePrice": 4400,
+          "image": "/cat-shawarma.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Spicy",
+            "Extra Creamy",
+            "Extra Spicy"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-meaty",
+              "name": "Extra Meaty",
+              "price": 1500
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "extra-creamy",
+              "name": "Extra Creamy",
+              "price": 500
+            },
+            {
+              "id": "extra-spicy",
+              "name": "Extra Spicy",
+              "price": 300
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "burger",
+      "name": "Burger",
+      "emoji": "🍔",
+      "accentColour": "#F5C518",
+      "description": "Signature stacks, combos and classics",
+      "products": [
+        {
+          "id": "big-momma",
+          "name": "Big Momma",
+          "tagline": "Double beef, double chicken, double sausage, heavy, big bun",
+          "description": "Double beef, double chicken, double sausage, heavy, big bun",
+          "basePrice": 10000,
+          "image": "/cat-burger.jpg",
+          "badges": [
+            "Signature"
+          ],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "chairman-burger",
+          "name": "Chairman Burger",
+          "tagline": "Beef + chicken patty, sunny side up egg, sausage, juicy",
+          "description": "Beef + chicken patty, sunny side up egg, sausage, juicy",
+          "basePrice": 7800,
+          "image": "/cat-burger.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "classic-burger",
+          "name": "Classic Burger",
+          "tagline": "Beef + chicken patty, sunny side up egg, signature sauce",
+          "description": "Beef + chicken patty, sunny side up egg, signature sauce",
+          "basePrice": 6800,
+          "image": "/cat-burger.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "triple-decker-chicken",
+          "name": "Triple Decker Chicken",
+          "tagline": "Triple chicken patty stack",
+          "description": "Triple chicken patty stack",
+          "basePrice": 8900,
+          "image": "/cat-burger.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "triple-decker-beef",
+          "name": "Triple Decker Beef",
+          "tagline": "Triple beef patty stack",
+          "description": "Triple beef patty stack",
+          "basePrice": 7500,
+          "image": "/cat-burger.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "double-decker-chicken",
+          "name": "Double Decker Chicken",
+          "tagline": "Double chicken patty stack",
+          "description": "Double chicken patty stack",
+          "basePrice": 6500,
+          "image": "/cat-burger.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "double-decker-beef",
+          "name": "Double Decker Beef",
+          "tagline": "Double beef patty stack",
+          "description": "Double beef patty stack",
+          "basePrice": 5500,
+          "image": "/cat-burger.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "chicken-burger",
+          "name": "Chicken Burger",
+          "tagline": "Simple chicken burger",
+          "description": "Simple chicken burger",
+          "basePrice": 4500,
+          "image": "/cat-burger.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "beef-burger",
+          "name": "Beef Burger",
+          "tagline": "Simple beef burger",
+          "description": "Simple beef burger",
+          "basePrice": 4000,
+          "image": "/cat-burger.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "big-momma-combo",
+          "name": "Big Momma Combo",
+          "tagline": "Big Momma burger + chips + chicken + free drink",
+          "description": "Big Momma burger + chips + chicken + free drink",
+          "basePrice": 15500,
+          "image": "/cat-burger.jpg",
+          "badges": [
+            "Best Selling Combo"
+          ],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "chairman-combo",
+          "name": "Chairman Combo",
+          "tagline": "Chairman burger + chips + chicken + free drink",
+          "description": "Chairman burger + chips + chicken + free drink",
+          "basePrice": 13300,
+          "image": "/cat-burger.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        },
+        {
+          "id": "classic-combo",
+          "name": "Classic Combo",
+          "tagline": "Classic burger + chips + free drink",
+          "description": "Classic burger + chips + free drink",
+          "basePrice": 12300,
+          "image": "/cat-burger.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Classic",
+            "BBQ Glaze",
+            "Spicy Habanero",
+            "Garlic Butter"
+          ],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-chicken-patty",
+              "name": "Extra Chicken Patty",
+              "price": 3800
+            },
+            {
+              "id": "extra-beef-patty",
+              "name": "Extra Beef Patty",
+              "price": 2800
+            },
+            {
+              "id": "extra-cheese",
+              "name": "Extra Cheese",
+              "price": 1000
+            },
+            {
+              "id": "sunny-side-up-egg",
+              "name": "Sunny Side Up Egg",
+              "price": 1000
+            },
+            {
+              "id": "extra-sausage",
+              "name": "Extra Sausage",
+              "price": 800
+            },
+            {
+              "id": "add-chips-+-chicken-+-free-drink",
+              "name": "Add Chips + Chicken + Free Drink",
+              "price": 5500
+            },
+            {
+              "id": "add-chips-+-drink",
+              "name": "Add Chips + Drink",
+              "price": 3500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Milkshake",
+            "Zobo",
+            "Soft Drink"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "emoji": "🥤",
+      "accentColour": "#1A7A4A",
+      "description": "Wash it down with something cold",
+      "products": [
+        {
+          "id": "milkshake",
+          "name": "Milkshake",
+          "tagline": "Thick, creamy milkshake",
+          "description": "Thick, creamy milkshake",
+          "basePrice": 4000,
+          "image": "/cat-drinks.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Vanilla",
+            "Strawberry",
+            "Chocolate",
+            "Caramel"
+          ],
+          "hasExtras": false,
+          "availableExtras": [],
+          "hasDrinkOption": false,
+          "availableDrinks": [],
+          "available": true
+        },
+        {
+          "id": "parfait",
+          "name": "Parfait",
+          "tagline": "Layered fruit and cream parfait",
+          "description": "Layered fruit and cream parfait",
+          "basePrice": 4000,
+          "image": "/cat-drinks.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": false,
+          "availableExtras": [],
+          "hasDrinkOption": false,
+          "availableDrinks": [],
+          "available": true
+        },
+        {
+          "id": "zobo",
+          "name": "Zobo",
+          "tagline": "Chilled hibiscus zobo drink",
+          "description": "Chilled hibiscus zobo drink",
+          "basePrice": 1800,
+          "image": "/cat-drinks.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": true,
+          "availableFlavours": [
+            "Original",
+            "Ginger",
+            "Mixed Fruit"
+          ],
+          "hasExtras": false,
+          "availableExtras": [],
+          "hasDrinkOption": false,
+          "availableDrinks": [],
+          "available": true
+        },
+        {
+          "id": "soft-drink",
+          "name": "Soft Drink",
+          "tagline": "Chilled soft drink",
+          "description": "Chilled soft drink",
+          "basePrice": 800,
+          "image": "/cat-drinks.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": false,
+          "availableExtras": [],
+          "hasDrinkOption": false,
+          "availableDrinks": [],
+          "available": true
+        }
+      ]
+    }
+  ]
+}
