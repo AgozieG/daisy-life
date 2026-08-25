@@ -35,7 +35,7 @@ router.post('/verify-and-dispatch', async (req, res) => {
       return res.status(400).json({ success: false, message: 'Paid amount does not match order total' });
     }
 
-    // 3. Dispatch order receipt to the restaurant email (non-blocking if SMTP isn't configured yet)
+    // 3. Dispatch the receipt with bounded SMTP timeouts so payment confirmation cannot hang indefinitely.
     let emailSent = false;
     try {
       await sendOrderReceiptEmail({ reference, cartItems, deliveryDetails, userProfile, deliveryType, paidAmount });
@@ -48,10 +48,11 @@ router.post('/verify-and-dispatch', async (req, res) => {
       success: true,
       message: emailSent
         ? 'Order confirmed and emailed to the kitchen'
-        : 'Order confirmed. Email dispatch is not active yet, but your payment was verified.',
+        : 'Order confirmed and payment verified, but the kitchen email could not be sent.',
       orderId: reference,
+      paymentVerified: true,
       emailSent,
-      whatsappSent: emailSent,
+      whatsappSent: false,
     });
   } catch (err) {
     const message = err?.response?.data?.message || err?.message || 'Something went wrong confirming your order';

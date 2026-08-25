@@ -35,7 +35,11 @@ export default function OrderSuccess() {
         <CheckCircle2 size={72} className="text-forest-green" />
       </motion.div>
       <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mt-5 mb-2">Order Placed! 🎉</h1>
-      <p className="text-white/60 font-body mb-6">Your receipt has been sent to Daisy Life's kitchen team.</p>
+      <p className="text-white/60 font-body mb-6">
+        {state.emailSent === false
+          ? 'Payment confirmed, but the kitchen receipt email could not be sent. Please contact Daisy Life with your order ID.'
+          : 'Your receipt has been sent to Daisy Life\'s kitchen team.'}
+      </p>
 
       <button onClick={copyId} className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-white/80 text-sm font-body mb-8">
         Order ID: <span className="text-daisy-gold font-accent">{state.orderId}</span> <Copy size={13} />

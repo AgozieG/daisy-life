@@ -15,9 +15,13 @@ function getTransporter() {
       host: SMTP_HOST || 'smtp.gmail.com',
       port: Number(SMTP_PORT || 587),
       secure: String(SMTP_SECURE || 'false') === 'true',
+      requireTLS: Number(SMTP_PORT || 587) === 587,
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 30000,
       auth: {
         user: SMTP_USER,
-        pass: SMTP_PASS,
+        pass: SMTP_PASS.replace(/\s+/g, ''),
       },
     });
   }

@@ -11,6 +11,7 @@ export async function verifyPaystackTransaction(reference) {
     headers: {
       Authorization: `Bearer ${secretKey}`,
     },
+    timeout: 15000,
   });
 
   return response.data;

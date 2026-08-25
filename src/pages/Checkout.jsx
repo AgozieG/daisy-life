@@ -51,17 +51,26 @@ export default function Checkout() {
   const handlePaystackCallback = async (reference) => {
     setIsProcessing(true);
     try {
-      const res = await axios.post(`${API_BASE_URL}/api/orders/verify-and-dispatch`, {
-        reference,
-        cartItems,
-        deliveryDetails: { phone, address, deliveryNote },
-        userProfile: user,
-        deliveryType,
-        grandTotal,
-      });
+      const res = await axios.post(
+        `${API_BASE_URL}/api/orders/verify-and-dispatch`,
+        {
+          reference,
+          cartItems,
+          deliveryDetails: { phone, address, deliveryNote },
+          userProfile: user,
+          deliveryType,
+          grandTotal,
+        },
+        { timeout: 40000 }
+      );
       if (res.data.success) {
+        if (res.data.emailSent === false) {
+          showToast('Payment confirmed, but the kitchen receipt email could not be sent.', 'warning');
+        }
         clearCart();
-        navigate('/order-success', { state: { orderId: reference, deliveryType, phone, address } });
+        navigate('/order-success', {
+          state: { orderId: reference, deliveryType, phone, address, emailSent: res.data.emailSent },
+        });
       } else {
         showToast(res.data.message || 'Order could not be confirmed', 'error');
       }
