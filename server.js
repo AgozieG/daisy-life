@@ -11,19 +11,24 @@ dotenv.config();
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const normaliseOrigin = (origin) => origin.trim().replace(/\/$/, '');
 const allowedOrigins = (process.env.FRONTEND_URL || 'http://localhost:5173')
   .split(',')
-  .map((origin) => origin.trim())
+  .map(normaliseOrigin)
   .filter(Boolean);
+
+const renderOriginPattern = /^https:\/\/[a-z0-9-]+\.onrender\.com$/i;
 
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
+      const requestOrigin = origin ? normaliseOrigin(origin) : null;
+
+      if (!requestOrigin || allowedOrigins.includes(requestOrigin) || renderOriginPattern.test(requestOrigin)) {
         return callback(null, true);
       }
 
-      return callback(new Error('Origin not allowed by CORS'));
+      return callback(new Error(`Origin not allowed by CORS: ${requestOrigin}`));
     },
     credentials: true,
   })
@@ -50,4 +55,4 @@ app.use((err, req, res, _next) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Daisy Life backend running on port ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`Daisy Life backend running on port ${PORT}`));
