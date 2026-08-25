@@ -99,9 +99,10 @@ Paystack REST API · Nodemailer + Gmail SMTP
 
 ## 📦 Deploying
 
-- **Frontend**: build with `npm run build` in `frontend/`, deploy the `dist/` folder to
-  Vercel, Netlify, or similar. Set `VITE_PAYSTACK_PUBLIC_KEY` and `VITE_GOOGLE_CLIENT_ID`
-  as environment variables on the host.
-- **Backend**: deploy `backend/` to Render, Railway, Fly.io, or a VPS. Set all `.env`
-  values as environment variables. Update `frontend`'s API calls (via a `VITE_API_URL`
-  env var, or a reverse proxy) to point at the deployed backend URL in production.
+- **Render**: deploy the repository root as one Web Service. Use `npm install && npm run build`
+  as the build command and `npm start` as the start command. Express serves the built
+  frontend and `/api` routes from the same Render URL.
+- Add the root `.env` values as Render environment variables. Set `NODE_ENV=production`,
+  `FRONTEND_URL` to the exact Render URL, and leave `VITE_API_URL` empty for the combined app.
+- Set `VITE_PAYSTACK_PUBLIC_KEY` during the Render build and keep `PAYSTACK_SECRET_KEY` and
+  SMTP credentials private. Render supplies `PORT` automatically; do not set it manually.
