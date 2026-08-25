@@ -13,6 +13,7 @@ function getTransporter() {
 
     transporter = nodemailer.createTransport({
       host: SMTP_HOST || 'smtp.gmail.com',
+      family: Number(process.env.SMTP_FAMILY || 4),
       port: Number(SMTP_PORT || 587),
       secure: String(SMTP_SECURE || 'false') === 'true',
       requireTLS: Number(SMTP_PORT || 587) === 587,
