@@ -1,5 +1,8 @@
+import dns from 'node:dns';
 import nodemailer from 'nodemailer';
 import { buildReceiptMessage } from '../utils/buildReceiptMessage.js';
+
+dns.setDefaultResultOrder('ipv4first');
 
 let transporter = null;
 
