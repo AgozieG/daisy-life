@@ -29,7 +29,7 @@ export default function Auth() {
   return (
     <div className="min-h-screen flex">
       <div className="hidden lg:flex w-1/2 relative overflow-hidden">
-        <img src="https://source.unsplash.com/900x1200/?nigerian-food,shawarma,burger" alt="Daisy Life food" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="hero.jpg" alt="Daisy Life food" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/20" />
         <div className="relative z-10 flex flex-col justify-end p-12">
           <span className="text-6xl mb-4 animate-float">🌼</span>
