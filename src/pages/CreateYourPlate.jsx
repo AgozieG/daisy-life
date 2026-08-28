@@ -561,24 +561,6 @@ export default function CreateYourPlate() {
                 </div>
               </div>
 
-              <div className="hidden sm:block">
-                {step < steps.length - 1 ? (
-                  <button
-                    onClick={() => canContinue && setStep((s) => s + 1)}
-                    disabled={!canContinue}
-                    className="bg-daisy-gold disabled:opacity-40 disabled:cursor-not-allowed text-charcoal font-accent font-bold py-3 px-6 rounded-full"
-                  >
-                    Continue · {formatCurrency(total * multiplier)}
-                  </button>
-                ) : (
-                  <button
-                    onClick={handleAdd}
-                    className="bg-deep-red text-white font-accent font-bold py-3 px-6 rounded-full flex items-center justify-center gap-2"
-                  >
-                    <Check size={16} /> Add Custom Plate to Cart · {formatCurrency(total * multiplier)}
-                  </button>
-                )}
-              </div>
             </div>
 
             <div className="w-full sm:w-auto">
@@ -586,14 +568,14 @@ export default function CreateYourPlate() {
                 <button
                   onClick={() => canContinue && setStep((s) => s + 1)}
                   disabled={!canContinue}
-                  className="w-full bg-daisy-gold disabled:opacity-40 disabled:cursor-not-allowed text-charcoal font-accent font-bold py-3 rounded-full mt-2 sm:mt-0"
+                  className="w-full p-3 bg-daisy-gold disabled:opacity-40 disabled:cursor-not-allowed text-charcoal font-accent font-bold py-3 rounded-full mt-2 sm:mt-0"
                 >
                   Continue · {formatCurrency(total * multiplier)}
                 </button>
               ) : (
                 <button
                   onClick={handleAdd}
-                  className="w-full bg-deep-red text-white font-accent font-bold py-3 rounded-full flex items-center justify-center gap-2 mt-2 sm:mt-0"
+                  className="w-full p-3 bg-deep-red text-white font-accent font-bold py-3 rounded-full flex items-center justify-center gap-2 mt-2 sm:mt-0"
                 >
                   <Check size={16} /> Add Custom Plate to Cart · {formatCurrency(total * multiplier)}
                 </button>
