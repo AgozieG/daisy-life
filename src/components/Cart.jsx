@@ -57,7 +57,7 @@ export default function Cart() {
               <div className="flex-1 overflow-y-auto p-4 space-y-3">
                 {cartItems.length === 0 ? (
                   <div className="h-full flex flex-col items-center justify-center text-center py-16">
-                    <div className="text-6xl mb-4 animate-float">🌼</div>
+                    <div className="text-6xl mb-4 inline-block animate-[spin_6s_linear_infinite]">🌼</div>
                     <p className="text-white/70 font-body mb-4">Your cart is feeling lonely 😔<br />Let's add some flavour!</p>
                     <button
                       onClick={() => { setIsCartOpen(false); navigate('/menu'); }}

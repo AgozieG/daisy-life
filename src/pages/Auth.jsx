@@ -32,7 +32,7 @@ export default function Auth() {
         <img src="hero.jpg" alt="Daisy Life food" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/20" />
         <div className="relative z-10 flex flex-col justify-end p-12">
-          <span className="text-6xl mb-4 animate-float">🌼</span>
+          <span className="inline-block text-6xl mb-4 animate-[spin_6s_linear_infinite]">🌼</span>
           <h2 className="font-display text-4xl font-bold text-white mb-3">Life Tastes Better at Daisy</h2>
           <p className="text-white/70 font-body">"Meals are so nice and the plating is second to none." — Mercy N.</p>
         </div>

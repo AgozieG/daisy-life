@@ -294,7 +294,7 @@ export default function Checkout() {
 
       {isProcessing && (
         <div className="fixed inset-0 z-[95] bg-charcoal/95 backdrop-blur flex flex-col items-center justify-center">
-          <span className="text-6xl animate-pulse-glow rounded-full">🌼</span>
+          <span className="inline-block text-6xl animate-[spin_6s_linear_infinite] rounded-full">🌼</span>
           <p className="text-white font-body mt-4">Confirming your order…</p>
         </div>
       )}

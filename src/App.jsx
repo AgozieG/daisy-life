@@ -16,7 +16,7 @@ const OrderSuccess = lazy(() => import('./pages/OrderSuccess'));
 function PageLoader() {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <span className="text-5xl animate-pulse-glow rounded-full">🌼</span>
+      <span className="inline-block text-5xl animate-[spin_6s_linear_infinite] animate-pulse-glow rounded-full">🌼</span>
     </div>
   );
 }

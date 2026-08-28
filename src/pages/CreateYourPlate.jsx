@@ -523,54 +523,83 @@ export default function CreateYourPlate() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="fixed bottom-16 md:bottom-0 left-0 right-0 bg-charcoal border-t border-white/10 p-4">
-        <div className="max-w-3xl mx-auto flex items-center gap-3">
-          {step > 0 && (
-            <button
-              onClick={() => {
-                clearSelectionsForStep(step - 1);
-                setStep((s) => s - 1);
-              }}
-              className="px-5 py-3 rounded-full bg-white/10 text-white font-accent font-semibold text-sm"
-            >
-              Back
-            </button>
-          )}
-          <div className="flex items-center gap-2 rounded-full bg-white/10 px-2 py-1.5">
-            <button
-              type="button"
-              onClick={() => setMultiplier((current) => Math.max(1, current - 1))}
-              className="w-8 h-8 rounded-full bg-white/10 text-white flex items-center justify-center"
-              aria-label="Decrease quantity"
-            >
-              <Minus size={14} />
-            </button>
-            <span className="min-w-12 text-center text-white font-accent font-bold text-sm">{multiplier}x</span>
-            <button
-              type="button"
-              onClick={() => setMultiplier((current) => current + 1)}
-              className="w-8 h-8 rounded-full bg-daisy-gold text-charcoal flex items-center justify-center"
-              aria-label="Increase quantity"
-            >
-              <Plus size={14} />
-            </button>
+      <div className="fixed bottom-20 sm:bottom-8 md:bottom-0 left-0 right-0 bg-charcoal border-t border-white/10 p-4 z-50" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 1rem)' }}>
+        <div className="max-w-3xl mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+            <div className="w-full sm:w-auto flex items-center justify-between gap-3">
+              <div className="flex items-center gap-30">
+                {step > 0 && (
+                  <button
+                    onClick={() => {
+                      clearSelectionsForStep(step - 1);
+                      setStep((s) => s - 1);
+                    }}
+                    className="px-3 py-2 rounded-full bg-white/10 text-white font-accent font-semibold text-sm"
+                  >
+                    Back
+                  </button>
+                )}
+
+                <div className="flex items-center gap-6 rounded-full bg-white/10 px-2 py-1">
+                  <button
+                    type="button"
+                    onClick={() => setMultiplier((current) => Math.max(1, current - 1))}
+                    className="w-7 h-7 rounded-full bg-white/10 text-white flex items-center justify-center"
+                    aria-label="Decrease quantity"
+                  >
+                    <Minus size={12} />
+                  </button>
+                  <span className="min-w-10 text-center text-white font-accent font-bold text-sm">{multiplier}x</span>
+                  <button
+                    type="button"
+                    onClick={() => setMultiplier((current) => current + 1)}
+                    className="w-7 h-7 rounded-full bg-daisy-gold text-charcoal flex items-center justify-center"
+                    aria-label="Increase quantity"
+                  >
+                    <Plus size={12} />
+                  </button>
+                </div>
+              </div>
+
+              <div className="hidden sm:block">
+                {step < steps.length - 1 ? (
+                  <button
+                    onClick={() => canContinue && setStep((s) => s + 1)}
+                    disabled={!canContinue}
+                    className="bg-daisy-gold disabled:opacity-40 disabled:cursor-not-allowed text-charcoal font-accent font-bold py-3 px-6 rounded-full"
+                  >
+                    Continue · {formatCurrency(total * multiplier)}
+                  </button>
+                ) : (
+                  <button
+                    onClick={handleAdd}
+                    className="bg-deep-red text-white font-accent font-bold py-3 px-6 rounded-full flex items-center justify-center gap-2"
+                  >
+                    <Check size={16} /> Add Custom Plate to Cart · {formatCurrency(total * multiplier)}
+                  </button>
+                )}
+              </div>
+            </div>
+
+            <div className="w-full sm:w-auto">
+              {step < steps.length - 1 ? (
+                <button
+                  onClick={() => canContinue && setStep((s) => s + 1)}
+                  disabled={!canContinue}
+                  className="w-full bg-daisy-gold disabled:opacity-40 disabled:cursor-not-allowed text-charcoal font-accent font-bold py-3 rounded-full mt-2 sm:mt-0"
+                >
+                  Continue · {formatCurrency(total * multiplier)}
+                </button>
+              ) : (
+                <button
+                  onClick={handleAdd}
+                  className="w-full bg-deep-red text-white font-accent font-bold py-3 rounded-full flex items-center justify-center gap-2 mt-2 sm:mt-0"
+                >
+                  <Check size={16} /> Add Custom Plate to Cart · {formatCurrency(total * multiplier)}
+                </button>
+              )}
+            </div>
           </div>
-          {step < steps.length - 1 ? (
-            <button
-              onClick={() => canContinue && setStep((s) => s + 1)}
-              disabled={!canContinue}
-              className="flex-1 bg-daisy-gold disabled:opacity-40 disabled:cursor-not-allowed text-charcoal font-accent font-bold py-3 rounded-full"
-            >
-              Continue · {formatCurrency(total * multiplier)}
-            </button>
-          ) : (
-            <button
-              onClick={handleAdd}
-              className="flex-1 bg-deep-red text-white font-accent font-bold py-3 rounded-full flex items-center justify-center gap-2"
-            >
-              <Check size={16} /> Add Custom Plate to Cart · {formatCurrency(total * multiplier)}
-            </button>
-          )}
         </div>
       </div>
     </div>

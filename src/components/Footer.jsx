@@ -22,7 +22,7 @@ export default function Footer() {
     <footer className="bg-charcoal border-t border-white/10 pt-14 pb-28 md:pb-10 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <div className="font-fun text-daisy-gold text-2xl mb-2">🌼 Daisy Life</div>
+          <div className="font-fun text-daisy-gold text-2xl mb-2"><span className="inline-block animate-[spin_6s_linear_infinite]">🌼</span> Daisy Life</div>
           <p className="text-white/60 text-sm font-body mb-4">Life tastes better at Daisy — Enugu's boldest fast food.</p>
           <div className="flex gap-3">
             <a href="https://www.instagram.com/daisylifeng/" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-daisy-gold hover:text-charcoal transition-colors">

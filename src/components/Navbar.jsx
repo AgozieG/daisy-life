@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-fun text-daisy-gold text-2xl sm:text-3xl">
-          <span aria-hidden>🌼</span> Daisy Life
+          <span aria-hidden className="inline-block animate-[spin_6s_linear_infinite]">🌼</span> Daisy Life
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 font-body text-base lg:text-lg font-medium">
