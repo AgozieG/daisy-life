@@ -11,6 +11,26 @@ import { formatCurrency } from '../utils/formatCurrency';
 const API_BASE_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
 const STEPS = ['Review', 'Delivery', 'Pay'];
 
+const DELIVERY_LOCATIONS = {
+  'Independence Layout': 2500,
+  'Brown & Brown': 1800,
+  'New Haven': 700,
+  'Trans-Ekulu': 3000,
+  'Golf': 3000,
+  'One Day': 3500,
+  'Thinkers Corner': 2500,
+  'Emene': 3500,
+  'Abakpa': 3000,
+  'Achara Layout': 3000,
+  'Maryland': 2500,
+  'Ugwuaji': 3000,
+  'Monastery': 3000,
+  'Centenary / Henley': 3500,
+  'Amechi Topland': 3000,
+  'Ogui Road': 2000,
+  'Okpara Avenue': 2500,
+};
+
 export default function Checkout() {
   const { cartItems, subtotal, clearCart } = useCart();
   const { user } = useUser();
@@ -19,6 +39,7 @@ export default function Checkout() {
 
   const [step, setStep] = useState(0);
   const [deliveryType, setDeliveryType] = useState('pickup');
+  const [deliveryLocation, setDeliveryLocation] = useState('Independence Layout');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
   const [deliveryNote, setDeliveryNote] = useState('');
@@ -34,7 +55,8 @@ export default function Checkout() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const grandTotal = subtotal;
+  const deliveryFee = deliveryType === 'delivery' ? DELIVERY_LOCATIONS[deliveryLocation] || 0 : 0;
+  const grandTotal = subtotal + deliveryFee;
 
   const canContinueDelivery = phone.trim().length >= 7 && (deliveryType === 'pickup' || address.trim().length >= 5);
 
@@ -56,7 +78,7 @@ export default function Checkout() {
         {
           reference,
           cartItems,
-          deliveryDetails: { phone, address, deliveryNote },
+          deliveryDetails: { phone, address, deliveryNote, deliveryLocation, deliveryFee },
           userProfile: user,
           deliveryType,
           grandTotal,
@@ -149,7 +171,7 @@ export default function Checkout() {
                       </div>
                       {item.selectedVariant && <p className="text-white/50 text-xs mt-1">Size: {item.selectedVariant}</p>}
                       {item.selectedFlavours?.length > 0 && <p className="text-white/50 text-xs">Flavour: {item.selectedFlavours.join(', ')}</p>}
-                      {item.selectedToppings?.length > 0 && <p className="text-white/50 text-xs">Extras: {item.selectedToppings.map((t) => t.name).join(', ')}</p>}
+                      {item.selectedToppings?.length > 0 && <p className="text-white/50 text-xs">Extras: {item.selectedToppings.map((t) => `${t.name}${Number(t.quantity || 1) > 1 ? ` × ${t.quantity}` : ''}`).join(', ')}</p>}
                       {item.selectedDrink && <p className="text-white/50 text-xs">Drink: {item.selectedDrink}</p>}
                     </div>
                   </div>
@@ -183,8 +205,29 @@ export default function Checkout() {
                   </div>
                 ) : (
                   <>
+                    <div>
+                      <label className="block text-white/70 text-sm font-body mb-1.5">Delivery Location</label>
+                     <div className="relative">
+                       <select
+                         value={deliveryLocation}
+                         onChange={(e) => setDeliveryLocation(e.target.value)}
+                         className="w-full appearance-none bg-charcoal-light border border-daisy-gold/60 rounded-2xl px-4 py-3 text-white text-sm font-body shadow-[0_0_0_1px_rgba(245,197,24,0.24)] focus:outline-none focus:ring-2 focus:ring-daisy-gold transition-all duration-200 hover:bg-white/8"
+                       >
+                         {Object.keys(DELIVERY_LOCATIONS).map((location) => (
+                           <option key={location} value={location} className="text-white bg-charcoal-light">
+                             {location} — {formatCurrency(DELIVERY_LOCATIONS[location])}
+                           </option>
+                         ))}
+                       </select>
+                       <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-daisy-gold">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                           <path d="m6 9 6 6 6-6" />
+                         </svg>
+                       </span>
+                     </div>
+                    </div>
                     <Field label="Delivery Address" value={address} onChange={setAddress} placeholder="Street, landmark, LGA" textarea />
-                    <p className="text-white/40 text-xs -mt-3 font-body">Our rider will confirm the delivery fee before dispatch</p>
+                    <p className="text-white/40 text-xs -mt-3 font-body">Delivery location fee is added automatically.</p>
                     <Field label="Delivery Note (Optional)" value={deliveryNote} onChange={setDeliveryNote} placeholder="e.g. Gate is green, next to the pharmacy" />
                   </>
                 )}
@@ -212,7 +255,8 @@ export default function Checkout() {
                     </div>
                   ))}
                   <div className="border-t border-white/10 mt-3 pt-3 flex justify-between text-sm font-body text-white/70">
-                    <span>Delivery</span><span>{deliveryType === 'pickup' ? 'Free (Pickup)' : 'Rider-confirmed'}</span>
+                    <span>Delivery</span>
+                    <span>{deliveryType === 'pickup' ? 'Free (Pickup)' : `${formatCurrency(deliveryFee)} · ${deliveryLocation}`}</span>
                   </div>
                   <div className="flex justify-between font-accent font-bold text-daisy-gold text-xl mt-2">
                     <span>Total</span><span>{formatCurrency(grandTotal)}</span>
@@ -237,6 +281,9 @@ export default function Checkout() {
             <h3 className="font-accent font-bold text-white mb-3">Order Total</h3>
             <div className="flex justify-between text-sm text-white/70 font-body mb-2">
               <span>{cartItems.length} items</span><span>{formatCurrency(subtotal)}</span>
+            </div>
+            <div className="flex justify-between text-sm text-white/70 font-body mb-2">
+              <span>Delivery</span><span>{deliveryType === 'pickup' ? 'Free' : formatCurrency(deliveryFee)}</span>
             </div>
             <div className="border-t border-white/10 pt-2 flex justify-between font-accent font-bold text-daisy-gold">
               <span>Total</span><span>{formatCurrency(grandTotal)}</span>

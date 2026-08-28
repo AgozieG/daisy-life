@@ -2,7 +2,7 @@ export function buildReceiptMessage({ reference, cartItems, deliveryDetails, use
   const itemLines = cartItems
     .map((item) => {
       const toppingList = item.selectedToppings?.length
-        ? `\n    Extras: ${item.selectedToppings.map((t) => t.name).join(', ')}`
+       ? `\n    Extras: ${item.selectedToppings.map((t) => `${t.name}${Number(t.quantity || 1) > 1 ? ` × ${t.quantity}` : ''}`).join(', ')}`
         : '';
       const flavourLine = item.selectedFlavours?.length ? `\n    Flavour: ${item.selectedFlavours.join(', ')}` : '';
       const variantLine = item.selectedVariant ? `\n    Size/Type: ${item.selectedVariant}` : '';
@@ -12,12 +12,17 @@ export function buildReceiptMessage({ reference, cartItems, deliveryDetails, use
     })
     .join('\n');
 
-  const deliveryBlock =
-    deliveryType === 'delivery'
-      ? `🛵 *DELIVERY*\n📍 Address: ${deliveryDetails.address}\n📝 Note: ${deliveryDetails.deliveryNote || 'None'}`
-      : `🏃 *PICKUP*\n📍 Customer picking up at the restaurant`;
+ const deliveryFee = Number(deliveryDetails?.deliveryFee || 0);
+ const deliveryLocationText = deliveryType === 'delivery'
+   ? `${deliveryDetails?.deliveryLocation || 'Delivery location'} — ₦${deliveryFee.toLocaleString()}`
+   : 'Pickup order';
 
-  return `
+ const deliveryBlock =
+   deliveryType === 'delivery'
+     ? `🛵 *DELIVERY*\n📍 Delivery Location: ${deliveryLocationText}\n📍 Address: ${deliveryDetails.address}\n📝 Note: ${deliveryDetails.deliveryNote || 'None'}`
+     : `🏃 *PICKUP*\n📍 Customer picking up at the restaurant`;
+
+ return `
 🌼 *NEW ORDER — DAISY LIFE* 🌼
 ━━━━━━━━━━━━━━━━━━━━━
 🔖 Order Ref: *${reference}*

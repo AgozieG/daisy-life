@@ -26,7 +26,7 @@ export default function CartItem({ item, onEdit }) {
           <p className="text-white/50 text-xs mt-0.5">Flavour: {item.selectedFlavours.join(', ')}</p>
         )}
         {item.selectedToppings?.length > 0 && (
-          <p className="text-white/50 text-xs mt-0.5">Extras: {item.selectedToppings.map((t) => t.name).join(', ')}</p>
+          <p className="text-white/50 text-xs mt-0.5">Extras: {item.selectedToppings.map((t) => `${t.name}${Number(t.quantity || 1) > 1 ? ` × ${t.quantity}` : ''}`).join(', ')}</p>
         )}
         {item.selectedDrink && <p className="text-white/50 text-xs mt-0.5">Drink: {item.selectedDrink}</p>}
         {item.specialInstructions && (

@@ -6,24 +6,64 @@ import { formatCurrency } from '../utils/formatCurrency';
 import { useCart } from '../hooks/useCart';
 import { useToast } from '../hooks/useToast';
 
+const DRINKS = [
+  'Zobo',
+  'Milkshake (Vanilla)',
+  'Milkshake (Strawberry)',
+  'Milkshake (Chocolate)',
+  'Milkshake (Small)',
+  'Hollandia Strawberry (Big)',
+  'Hollandia Plain (Big)',
+  'Chivita Active Zest (Big)',
+  'Chivita Exotic (Pineapple & Coconut) (Big)',
+  'Chivita Active (Blue) (Big)',
+  'V-Smart (Big)',
+  'Chivita (Medium)',
+  'Chivita (Small)',
+  'Hollandia (Medium)',
+  'Hollandia (Small)',
+  'Fayrouz',
+  'Malt',
+  'Mini Velet Wine',
+  'Mini Ceres Wine',
+  'Water',
+];
+
+const DRINK_PRICE = {
+  'Zobo': 1800,
+  'Milkshake (Vanilla)': 4000,
+  'Milkshake (Strawberry)': 4200,
+  'Milkshake (Chocolate)': 4500,
+  'Milkshake (Small)': 2500,
+  'Hollandia Strawberry (Big)': 2500,
+  'Hollandia Plain (Big)': 2500,
+  'Chivita Active Zest (Big)': 2500,
+  'Chivita Exotic (Pineapple & Coconut) (Big)': 2500,
+  'Chivita Active (Blue) (Big)': 2500,
+  'V-Smart (Big)': 2500,
+  'Chivita (Medium)': 1500,
+  'Chivita (Small)': 1000,
+  'Hollandia (Medium)': 1500,
+  'Hollandia (Small)': 1000,
+  'Fayrouz': 1000,
+  'Malt': 1200,
+  'Mini Velet Wine': 4500,
+  'Mini Ceres Wine': 4500,
+  'Water': 500,
+};
+
 export default function ProductModal({ product, category, onClose, editingItem = null }) {
   const { addItem, updateItem } = useCart();
   const { showToast } = useToast();
 
   const [variant, setVariant] = useState(editingItem?.selectedVariant || product?.variants?.[0]?.name || null);
   const [flavours, setFlavours] = useState(editingItem?.selectedFlavours || []);
-  const [extras, setExtras] = useState(editingItem?.selectedToppings || []);
+  const [extras, setExtras] = useState(() => normalizeExtras(editingItem?.selectedToppings || []));
   const [drink, setDrink] = useState(editingItem?.selectedDrink || null);
   const [notes, setNotes] = useState(editingItem?.specialInstructions || '');
   const [qty, setQty] = useState(editingItem?.quantity || 1);
 
-  const getDrinkPrice = (name) => {
-    const value = String(name || '').trim().toLowerCase();
-    if (value === 'milkshake') return 4000;
-    if (value === 'zobo') return 1800;
-    if (value === 'soft drink' || value === 'softdrink') return 800;
-    return 0;
-  };
+  const getDrinkPrice = (name) => DRINK_PRICE[name] || 0;
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -41,15 +81,30 @@ export default function ProductModal({ product, category, onClose, editingItem =
   const variantModifier = variant
     ? product.variants.find((v) => v.name === variant)?.priceModifier || 0
     : 0;
-  const extrasTotal = extras.reduce((sum, e) => sum + e.price, 0);
+  const extrasTotal = extras.reduce((sum, e) => sum + (e.price * Math.max(1, Number(e.quantity || 1))), 0);
   const drinkPrice = drink ? getDrinkPrice(drink) : 0;
   const unitPrice = product.basePrice + variantModifier + extrasTotal + drinkPrice;
   const total = unitPrice * qty;
 
-  const toggleExtra = (extra) => {
-    setExtras((prev) =>
-      prev.some((e) => e.id === extra.id) ? prev.filter((e) => e.id !== extra.id) : [...prev, extra]
-    );
+  const addExtra = (extra) => {
+    setExtras((prev) => {
+      const existing = prev.find((e) => e.id === extra.id);
+      if (existing) {
+        return prev.map((e) => (e.id === extra.id ? { ...e, quantity: (Number(e.quantity || 1) + 1) } : e));
+      }
+      return [...prev, { ...extra, quantity: 1 }];
+    });
+  };
+
+  const removeExtra = (extra) => {
+    setExtras((prev) => {
+      const existing = prev.find((e) => e.id === extra.id);
+      if (!existing) return prev;
+      if ((Number(existing.quantity || 1) - 1) <= 0) {
+        return prev.filter((e) => e.id !== extra.id);
+      }
+      return prev.map((e) => (e.id === extra.id ? { ...e, quantity: Number(e.quantity || 1) - 1 } : e));
+    });
   };
 
   const toggleFlavour = (flavour) => {
@@ -145,32 +200,49 @@ export default function ProductModal({ product, category, onClose, editingItem =
             {product.hasExtras && product.availableExtras.length > 0 && (
               <Section title="Extra Toppings" optional>
                 <div className="space-y-2">
-                  {product.availableExtras.map((extra) => (
-                    <label
-                      key={extra.id}
-                      className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 cursor-pointer transition-colors"
-                    >
-                      <span className="flex items-center gap-3">
-                        <input
-                          type="checkbox"
-                          checked={extras.some((e) => e.id === extra.id)}
-                          onChange={() => toggleExtra(extra)}
-                          className="w-4 h-4 accent-daisy-gold"
-                        />
-                        <span className="text-white text-sm font-body">{extra.name}</span>
-                      </span>
-                      <span className="text-daisy-gold text-sm font-accent font-semibold">+{formatCurrency(extra.price)}</span>
-                    </label>
-                  ))}
+                  {product.availableExtras.map((extra) => {
+                    const current = extras.find((e) => e.id === extra.id);
+                    const quantity = Number(current?.quantity || 0);
+                    return (
+                      <div
+                        key={extra.id}
+                        className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 transition-colors"
+                      >
+                        <span className="flex items-center gap-3">
+                          <span className="text-white text-sm font-body">{extra.name}</span>
+                        </span>
+                        <span className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={() => removeExtra(extra)}
+                            className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20"
+                            aria-label={`Remove ${extra.name}`}
+                          >
+                            <Minus size={12} />
+                          </button>
+                          <span className="min-w-5 text-center text-white text-sm font-body font-bold">{quantity}</span>
+                          <button
+                            type="button"
+                            onClick={() => addExtra(extra)}
+                            className="w-7 h-7 rounded-full bg-daisy-gold flex items-center justify-center text-charcoal hover:bg-daisy-gold/90"
+                            aria-label={`Add ${extra.name}`}
+                          >
+                            <Plus size={12} />
+                          </button>
+                          <span className="text-daisy-gold text-sm font-accent font-semibold ml-2">+{formatCurrency(extra.price)}</span>
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </Section>
             )}
 
-            {product.hasDrinkOption && product.availableDrinks.length > 0 && (
+            {product.hasDrinkOption && (
               <Section title="🥤 Pick a Drink" optional>
                 <div className="space-y-2">
                   <Pill active={drink === null} onClick={() => setDrink(null)}>None</Pill>
-                  {product.availableDrinks.map((d) => {
+                  {DRINKS.map((d) => {
                     const price = getDrinkPrice(d);
                     return (
                       <Pill key={d} active={drink === d} onClick={() => setDrink(d)}>
@@ -226,6 +298,16 @@ export default function ProductModal({ product, category, onClose, editingItem =
       </motion.div>
     </AnimatePresence>
   );
+}
+
+function normalizeExtras(items = []) {
+  return items
+    .map((item) => ({
+      ...item,
+      id: item.id || item.name,
+      quantity: Math.max(1, Number(item.quantity || 1)),
+    }))
+    .filter((item) => item.name || item.id);
 }
 
 function Section({ title, children, optional, required }) {
