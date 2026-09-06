@@ -7,7 +7,100 @@ import { formatCurrency } from '../utils/formatCurrency';
 import { useCart } from '../hooks/useCart';
 import { useToast } from '../hooks/useToast';
 
-const ELIGIBLE = ['loaded-fries', 'small-chops'];
+const ELIGIBLE = ['loaded-fries', 'small-chops', 'pizza', 'hotdog'];
+
+const NO_SELECTION = { id: 'none', name: 'None', price: 0 };
+
+const HOTDOG_OPTIONS = [
+  { id: 'beef-loaded-hotdog', name: 'Beef Loaded Hotdog', price: 4500 },
+  { id: 'chicken-loaded-hotdog', name: 'Chicken Loaded Hotdog', price: 4500 },
+  { id: 'half-half-protein', name: 'Half & Half Protein', price: 5000 },
+];
+
+const HOTDOG_SIDES = [
+  { id: 'chips', name: 'Chips', price: 2500 },
+  { id: 'sweet-potato', name: 'Sweet Potato', price: 2000 },
+  { id: 'wings', name: '4 Crunchy Wings', price: 4000 },
+];
+
+const HOTDOG_COMBOS = [
+  { id: 'chips-drink', name: 'Chips + Soft Drink', price: 3500 },
+  { id: 'chips-chicken-drink', name: 'Chips + Chicken + Free Soft Drink', price: 5500 },
+];
+
+const PIZZA_SIZES = [
+  {
+    id: 'medium',
+    name: 'Medium',
+    price: 2000,
+    stuffedCrustPrice: 2000,
+    toppings: [
+      { id: 'shredded-chicken', name: 'Shredded Chicken', price: 3000 },
+      { id: 'shredded-beef', name: 'Shredded Beef', price: 2500 },
+      { id: 'pepperoni', name: 'Pepperoni', price: 3000 },
+      { id: 'cheese', name: 'Cheese', price: 2500 },
+      { id: 'sausage', name: 'Sausage', price: 800 },
+      { id: 'green-pepper', name: 'Green Pepper', price: 200 },
+      { id: 'sweet-corn', name: 'Sweet Corn', price: 200 },
+      { id: 'onions', name: 'Onions', price: 200 },
+      { id: 'fresh-tomato', name: 'Fresh Tomato', price: 200 },
+    ],
+    specials: [
+      { id: 'suya-beef', name: 'Suya Beef', price: 3000 },
+      { id: 'suya-chicken', name: 'Suya Chicken', price: 3500 },
+    ],
+  },
+  {
+    id: 'large',
+    name: 'Large',
+    price: 3000,
+    stuffedCrustPrice: 3000,
+    toppings: [
+      { id: 'shredded-chicken', name: 'Shredded Chicken', price: 5000 },
+      { id: 'shredded-beef', name: 'Shredded Beef', price: 4500 },
+      { id: 'pepperoni', name: 'Pepperoni', price: 4500 },
+      { id: 'cheese', name: 'Cheese', price: 3500 },
+      { id: 'sausage', name: 'Sausage', price: 800 },
+      { id: 'green-pepper', name: 'Green Pepper', price: 350 },
+      { id: 'sweet-corn', name: 'Sweet Corn', price: 350 },
+      { id: 'onions', name: 'Onions', price: 200 },
+      { id: 'fresh-tomato', name: 'Fresh Tomato', price: 200 },
+    ],
+    specials: [
+      { id: 'suya-beef', name: 'Suya Beef', price: 5000 },
+      { id: 'suya-chicken', name: 'Suya Chicken', price: 5500 },
+      { id: 'triple-protein', name: 'Triple Protein', price: 5500 },
+    ],
+  },
+  {
+    id: 'extra-large',
+    name: 'Extra Large',
+    price: 3500,
+    stuffedCrustPrice: 3500,
+    toppings: [
+      { id: 'shredded-chicken', name: 'Shredded Chicken', price: 6000 },
+      { id: 'shredded-beef', name: 'Shredded Beef', price: 5000 },
+      { id: 'pepperoni', name: 'Pepperoni', price: 5000 },
+      { id: 'cheese', name: 'Cheese', price: 4000 },
+      { id: 'sausage', name: 'Sausage', price: 800 },
+      { id: 'green-pepper', name: 'Green Pepper', price: 400 },
+      { id: 'sweet-corn', name: 'Sweet Corn', price: 400 },
+      { id: 'onions', name: 'Onions', price: 400 },
+      { id: 'fresh-tomato', name: 'Fresh Tomato', price: 200 },
+    ],
+    specials: [
+      { id: 'suya-beef', name: 'Suya Beef', price: 5500 },
+      { id: 'suya-chicken', name: 'Suya Chicken', price: 6000 },
+      { id: 'triple-protein', name: 'Triple Protein', price: 6000 },
+    ],
+  },
+];
+
+const PIZZA_BASES = [
+  { id: 'classic-crust', name: 'Classic Crust', price: 0 },
+  { id: 'thin-crust', name: 'Thin Crust', price: 0 },
+  { id: 'sausage-stuffed-crust', name: 'Sausage Stuffed Crust', price: 2000 },
+];
 
 const LOADED_FRIES_SIZES = [
   { id: 'smaller', name: 'Smaller (500ml)', price: 500 },
@@ -56,22 +149,7 @@ const DRINK_OPTIONS = [
   { name: 'Milkshake (Vanilla)', price: 4000 },
   { name: 'Milkshake (Strawberry)', price: 4200 },
   { name: 'Milkshake (Chocolate)', price: 4500 },
-  { name: 'Milkshake (Small)', price: 2500 },
-  { name: 'Hollandia Strawberry (Big)', price: 2500 },
-  { name: 'Hollandia Plain (Big)', price: 2500 },
-  { name: 'Chivita Active Zest (Big)', price: 2500 },
   { name: 'Chivita Exotic (Pineapple & Coconut) (Big)', price: 2500 },
-  { name: 'Chivita Active (Blue) (Big)', price: 2500 },
-  { name: 'V-Smart (Big)', price: 2500 },
-  { name: 'Chivita (Medium)', price: 1500 },
-  { name: 'Chivita (Small)', price: 1000 },
-  { name: 'Hollandia (Medium)', price: 1500 },
-  { name: 'Hollandia (Small)', price: 1000 },
-  { name: 'Fayrouz', price: 1000 },
-  { name: 'Malt', price: 1200 },
-  { name: 'Mini Velet Wine', price: 4500 },
-  { name: 'Mini Ceres Wine', price: 4500 },
-  { name: 'Water', price: 500 },
 ];
 
 function getDrinkSummary(drinks) {
@@ -91,17 +169,41 @@ export default function CreateYourPlate() {
   const [proteins, setProteins] = useState([]);
   const [drinks, setDrinks] = useState([]);
   const [multiplier, setMultiplier] = useState(1);
+  const [hotdogChoice, setHotdogChoice] = useState(null);
+  const [hotdogSides, setHotdogSides] = useState([]);
+  const [hotdogCombos, setHotdogCombos] = useState([]);
+  const [pizzaSize, setPizzaSize] = useState(null);
+  const [pizzaBase, setPizzaBase] = useState(null);
+  const [pizzaToppings, setPizzaToppings] = useState([]);
+  const [pizzaSpecials, setPizzaSpecials] = useState([]);
   const { addItem } = useCart();
   const { showToast } = useToast();
 
-  const category = menuData.categories.find((c) => c.id === catId);
+  const category = menuData.categories.find((c) => c.id === catId) || {
+    id: catId,
+    name: catId === 'hotdog' ? 'Hotdog' : catId === 'pizza' ? 'Pizza' : 'Custom Plate',
+    emoji: catId === 'hotdog' ? '🌭' : catId === 'pizza' ? '🍕' : '🍽️',
+    products: [],
+  };
   const steps = catId === 'loaded-fries'
     ? ['Size', 'Base', 'Protein & Toppings', 'Drinks']
-    : ['Pack', 'Content', 'Protein', 'Drinks'];
+    : catId === 'small-chops'
+      ? ['Pack', 'Content', 'Protein', 'Drinks']
+      : catId === 'hotdog'
+        ? ['Hotdog', 'Pick a Side', 'Make It a Combo', 'Select Drinks']
+        : ['Size', 'Base', 'Protein & Toppings', 'Special Protein Options', 'Select Drinks'];
 
   const activeBase = LOADED_FRIES_BASES.find((item) => item.id === base) || null;
+  const activePizzaSize = PIZZA_SIZES.find((item) => item.id === pizzaSize) || null;
+  const activePizzaBase = PIZZA_BASES.find((item) => item.id === pizzaBase) || null;
   const basePrice = size && activeBase ? (size.id === 'smaller' ? activeBase.singlePrice : activeBase.doublePrice) : 0;
   const loadedFriesPrice = (size ? size.price : 0) + basePrice;
+  const hotdogSideTotal = hotdogSides.reduce((sum, item) => sum + item.price, 0);
+  const hotdogComboTotal = hotdogCombos.reduce((sum, item) => sum + item.price, 0);
+  const hotdogPrice = (hotdogChoice ? hotdogChoice.price : 0) + hotdogSideTotal + hotdogComboTotal;
+  const pizzaBasePrice = activePizzaBase && activePizzaSize && activePizzaBase.id === 'sausage-stuffed-crust' ? activePizzaSize.stuffedCrustPrice : 0;
+  const pizzaToppingTotal = pizzaToppings.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const pizzaSpecialTotal = pizzaSpecials.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const smallChopsContentTotal = contents.reduce((sum, item) => sum + item.price, 0);
   const proteinTotal = proteins.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -110,15 +212,35 @@ export default function CreateYourPlate() {
 
   const total = useMemo(() => {
     if (catId === 'loaded-fries') return loadedFriesPrice + proteinTotal + drinkTotal;
-    if (!pack) return 0;
-    return pack.price + smallChopsContentTotal + proteinTotal + drinkTotal;
-  }, [catId, loadedFriesPrice, pack, smallChopsContentTotal, proteinTotal, drinkTotal]);
+    if (catId === 'small-chops') {
+      if (!pack) return 0;
+      return pack.price + smallChopsContentTotal + proteinTotal + drinkTotal;
+    }
+    if (catId === 'hotdog') return hotdogPrice + drinkTotal;
+    if (!pizzaSize) return 0;
+    return (activePizzaSize ? activePizzaSize.price : 0) + pizzaBasePrice + pizzaToppingTotal + pizzaSpecialTotal + drinkTotal;
+  }, [catId, loadedFriesPrice, pack, smallChopsContentTotal, proteinTotal, drinkTotal, hotdogPrice, pizzaSize, activePizzaSize, pizzaBasePrice, pizzaToppingTotal, pizzaSpecialTotal]);
 
   const clearSelectionsForStep = (targetStep) => {
-    if (targetStep === 0) setSize(null);
-    if (targetStep === 1) setBase(null);
-    if (targetStep === 2) setProteins([]);
-    if (targetStep === 3) setDrinks([]);
+    if (targetStep === 0) {
+      setSize(null);
+      setPizzaSize(null);
+      setHotdogChoice(null);
+    }
+    if (targetStep === 1) {
+      setBase(null);
+      setPizzaBase(null);
+      setHotdogSides([]);
+    }
+    if (targetStep === 2) {
+      setProteins([]);
+      setPizzaToppings([]);
+      setHotdogCombos([]);
+    }
+    if (targetStep === 3) {
+      setDrinks([]);
+      setPizzaSpecials([]);
+    }
   };
 
   const switchCategory = (id) => {
@@ -130,6 +252,13 @@ export default function CreateYourPlate() {
     setContents([]);
     setProteins([]);
     setDrinks([]);
+    setHotdogChoice(null);
+    setHotdogSides([]);
+    setHotdogCombos([]);
+    setPizzaSize(null);
+    setPizzaBase(null);
+    setPizzaToppings([]);
+    setPizzaSpecials([]);
     setMultiplier(1);
   };
 
@@ -173,6 +302,32 @@ export default function CreateYourPlate() {
     });
   };
 
+  const updatePizzaToppingQuantity = (item, delta) => {
+    setPizzaToppings((prev) => {
+      const existing = prev.find((entry) => entry.id === item.id);
+      const currentQuantity = existing ? existing.quantity : 0;
+      const nextQuantity = Math.max(0, currentQuantity + delta);
+      if (nextQuantity === 0) return prev.filter((entry) => entry.id !== item.id);
+      if (existing) {
+        return prev.map((entry) => (entry.id === item.id ? { ...entry, quantity: nextQuantity } : entry));
+      }
+      return [...prev, { ...item, quantity: nextQuantity }];
+    });
+  };
+
+  const updatePizzaSpecialQuantity = (item, delta) => {
+    setPizzaSpecials((prev) => {
+      const existing = prev.find((entry) => entry.id === item.id);
+      const currentQuantity = existing ? existing.quantity : 0;
+      const nextQuantity = Math.max(0, currentQuantity + delta);
+      if (nextQuantity === 0) return prev.filter((entry) => entry.id !== item.id);
+      if (existing) {
+        return prev.map((entry) => (entry.id === item.id ? { ...entry, quantity: nextQuantity } : entry));
+      }
+      return [...prev, { ...item, quantity: nextQuantity }];
+    });
+  };
+
   const toggleFreeProtein = (item) => {
     setProteins((prev) => {
       const existing = prev.find((entry) => entry.id === item.id);
@@ -190,18 +345,57 @@ export default function CreateYourPlate() {
       return true;
     }
 
-    if (step === 0) return !!pack;
-    if (step === 1) return contents.length > 0;
-    if (step === 2) return selectedProteinCount > 0;
+    if (catId === 'small-chops') {
+      if (step === 0) return !!pack;
+      if (step === 1) return contents.length > 0;
+      if (step === 2) return selectedProteinCount > 0;
+      return true;
+    }
+
+    if (catId === 'hotdog') {
+      if (step === 0) return !!hotdogChoice;
+      return true;
+    }
+
+    if (catId === 'pizza') {
+      if (step === 0) return !!pizzaSize;
+      if (step === 1) return !!pizzaBase;
+      return true;
+    }
+
     return true;
   })();
 
   const handleAdd = () => {
     if (!category) return;
-    const customLabel = catId === 'loaded-fries' ? `Custom Loaded Fries — ${size?.name || 'Custom'} · ${activeBase?.name || 'Base'}` : `Custom Small Chops — ${pack?.name || 'Pack'}`;
-    const extras = catId === 'loaded-fries'
-      ? proteins.filter((item) => item.quantity > 0)
-      : [...contents, ...proteins.filter((item) => item.quantity > 0)];
+
+    let customLabel = '';
+    let extras = [];
+    let selectedVariant = '';
+    let basePriceForCart = 0;
+
+    if (catId === 'loaded-fries') {
+      customLabel = `Custom Loaded Fries — ${size?.name || 'Custom'} · ${activeBase?.name || 'Base'}`;
+      extras = proteins.filter((item) => item.quantity > 0);
+      basePriceForCart = loadedFriesPrice;
+      selectedVariant = `${size?.name || 'Custom'} · ${activeBase?.name || 'Base'}`;
+    } else if (catId === 'small-chops') {
+      customLabel = `Custom Small Chops — ${pack?.name || 'Pack'}`;
+      extras = [...contents, ...proteins.filter((item) => item.quantity > 0)];
+      basePriceForCart = pack ? pack.price + smallChopsContentTotal : 0;
+      selectedVariant = `${pack?.name || 'Custom'} pack`;
+    } else if (catId === 'hotdog') {
+      customLabel = `Custom Hotdog — ${hotdogChoice?.name || 'Hotdog'}`;
+      extras = [...hotdogSides, ...hotdogCombos];
+      basePriceForCart = hotdogPrice;
+      selectedVariant = `${hotdogChoice?.name || 'Hotdog'} · ${hotdogSides.length ? hotdogSides.map((item) => item.name).join(', ') : 'No side'} · ${hotdogCombos.length ? hotdogCombos.map((item) => item.name).join(', ') : 'No combo'}`;
+    } else {
+      customLabel = `Custom Pizza — ${activePizzaSize?.name || 'Pizza'}`;
+      extras = [...pizzaToppings.filter((item) => item.quantity > 0), ...pizzaSpecials.filter((item) => item.quantity > 0)];
+      basePriceForCart = (activePizzaSize ? activePizzaSize.price : 0) + pizzaBasePrice + pizzaToppingTotal + pizzaSpecialTotal;
+      selectedVariant = `${activePizzaSize?.name || 'Custom'} · ${activePizzaBase?.name || 'Base'}`;
+    }
+
     const finalDrinkText = getDrinkSummary(drinks) || 'No drink';
     const safeTotal = total * multiplier;
 
@@ -210,8 +404,8 @@ export default function CreateYourPlate() {
       productName: customLabel,
       category: category.name,
       image: category.products[0]?.image,
-      basePrice: catId === 'loaded-fries' ? loadedFriesPrice : (pack ? pack.price + smallChopsContentTotal : 0),
-      selectedVariant: catId === 'loaded-fries' ? `${size?.name || 'Custom'} · ${activeBase?.name || 'Base'}` : `${pack?.name || 'Custom'} pack`,
+      basePrice: basePriceForCart,
+      selectedVariant,
       selectedFlavours: [],
       selectedToppings: extras,
       selectedDrink: finalDrinkText,
@@ -230,11 +424,15 @@ export default function CreateYourPlate() {
   return (
     <div className="pt-24 pb-32 md:pb-16 px-4 sm:px-6 max-w-3xl mx-auto min-h-screen">
       <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mb-2">🍽️ Create Your Plate</h1>
-      <p className="text-white/60 font-body mb-6">Build your own Loaded Fries or Small Chops box step by step.</p>
+      <p className="text-white/60 font-body mb-6">Build your own hotdog, pizza, loaded fries, or small chops box step by step.</p>
 
       <div className="flex gap-2 mb-8">
         {ELIGIBLE.map((id) => {
-          const c = menuData.categories.find((cat) => cat.id === id);
+          const c = menuData.categories.find((cat) => cat.id === id) || {
+            id,
+            name: id === 'hotdog' ? 'Hotdog' : id === 'pizza' ? 'Pizza' : 'Custom Plate',
+            emoji: id === 'hotdog' ? '🌭' : id === 'pizza' ? '🍕' : '🍽️',
+          };
           return (
             <button
               key={id}
@@ -365,6 +563,216 @@ export default function CreateYourPlate() {
               <p className="mt-4 text-xs text-white/60 font-body">
                 Selected {selectedProteinCount} / {requiredProteinCount} protein{requiredProteinCount > 1 ? 's' : ''}
               </p>
+            </StepBlock>
+          )}
+
+          {catId === 'hotdog' && step === 0 && (
+            <StepBlock title="Choose Your Hotdog">
+              <div className="grid grid-cols-1 gap-3">
+                {HOTDOG_OPTIONS.map((option) => (
+                  <OptionCard
+                    key={option.id}
+                    active={hotdogChoice?.id === option.id}
+                    onClick={() => {
+                      setHotdogChoice(option);
+                      setHotdogSides([]);
+                      setHotdogCombos([]);
+                      setStep(1);
+                    }}
+                    title={option.name}
+                    price={option.price}
+                  />
+                ))}
+              </div>
+            </StepBlock>
+          )}
+
+          {catId === 'hotdog' && step === 1 && (
+            <StepBlock title="Pick a Side (Choose as many as you want)">
+              <div className="grid grid-cols-1 gap-3">
+                {HOTDOG_SIDES.map((option) => {
+                  const active = hotdogSides.some((item) => item.id === option.id);
+                  return (
+                    <OptionCard
+                      key={option.id}
+                      active={active}
+                      onClick={() => {
+                        setHotdogSides((prev) => {
+                          const exists = prev.some((item) => item.id === option.id);
+                          return exists ? prev.filter((item) => item.id !== option.id) : [...prev, option];
+                        });
+                      }}
+                      title={option.name}
+                      price={option.price}
+                    />
+                  );
+                })}
+              </div>
+            </StepBlock>
+          )}
+
+          {catId === 'hotdog' && step === 2 && (
+            <StepBlock title="Make It a Combo (Choose as many as you want)">
+              <div className="grid grid-cols-1 gap-3">
+                {HOTDOG_COMBOS.map((option) => {
+                  const active = hotdogCombos.some((item) => item.id === option.id);
+                  return (
+                    <OptionCard
+                      key={option.id}
+                      active={active}
+                      onClick={() => {
+                        setHotdogCombos((prev) => {
+                          const exists = prev.some((item) => item.id === option.id);
+                          return exists ? prev.filter((item) => item.id !== option.id) : [...prev, option];
+                        });
+                      }}
+                      title={option.name}
+                      price={option.price}
+                    />
+                  );
+                })}
+              </div>
+            </StepBlock>
+          )}
+
+          {catId === 'pizza' && step === 0 && (
+            <StepBlock title="Choose Your Size">
+              <div className="grid grid-cols-1 gap-3">
+                {PIZZA_SIZES.map((option) => (
+                  <OptionCard
+                    key={option.id}
+                    active={pizzaSize === option.id}
+                    onClick={() => {
+                      setPizzaSize(option.id);
+                      setPizzaBase(null);
+                      setPizzaToppings([]);
+                      setPizzaSpecials([]);
+                      setStep(1);
+                    }}
+                    title={option.name}
+                    price={option.price}
+                  />
+                ))}
+              </div>
+            </StepBlock>
+          )}
+
+          {catId === 'pizza' && step === 1 && (
+            <StepBlock title="Choose Your Base">
+              <div className="space-y-3">
+                {PIZZA_BASES.map((option) => {
+                  const optionPrice = option.id === 'sausage-stuffed-crust' && activePizzaSize ? activePizzaSize.stuffedCrustPrice : option.price;
+
+                  return (
+                    <button
+                      key={option.id}
+                      onClick={() => {
+                        setPizzaBase(option.id);
+                        setPizzaToppings([]);
+                        setPizzaSpecials([]);
+                        setStep(2);
+                      }}
+                      className={`w-full text-left rounded-xl border p-4 transition-all ${
+                        pizzaBase === option.id ? 'bg-daisy-gold/15 border-daisy-gold' : 'bg-white/5 border-white/10 hover:border-white/30'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between gap-3">
+                        <div>
+                          <p className="font-body font-semibold text-white text-sm">{option.name}</p>
+                          <p className="text-white/50 text-xs mt-1">{option.id === 'sausage-stuffed-crust' ? 'Premium stuffed crust on selected pizza size' : 'Included with this pizza size'}</p>
+                        </div>
+                        <span className="text-daisy-gold text-xs font-accent font-semibold">
+                          {optionPrice > 0 ? `+${formatCurrency(optionPrice)}` : 'Free'}
+                        </span>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </StepBlock>
+          )}
+
+          {catId === 'pizza' && step === 2 && activePizzaSize && (
+            <StepBlock title="Choose Your Protein & Toppings">
+              <div className="space-y-2">
+                {activePizzaSize.toppings.map((item) => {
+                  const selected = pizzaToppings.find((entry) => entry.id === item.id);
+                  const quantity = selected ? selected.quantity : 0;
+                  const totalForItem = item.price * quantity;
+
+                  return (
+                    <div key={item.id} className="flex items-center justify-between gap-3 rounded-xl bg-white/5 px-3 py-3">
+                      <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-2 rounded-full bg-white/10 p-1">
+                          <button
+                            type="button"
+                            onClick={() => updatePizzaToppingQuantity(item, -1)}
+                            className="w-7 h-7 rounded-full bg-white/10 text-white flex items-center justify-center"
+                            aria-label={`Decrease ${item.name}`}
+                          >
+                            <Minus size={12} />
+                          </button>
+                          <span className="min-w-5 text-center text-white font-accent font-bold">{quantity}</span>
+                          <button
+                            type="button"
+                            onClick={() => updatePizzaToppingQuantity(item, 1)}
+                            className="w-7 h-7 rounded-full bg-daisy-gold text-charcoal flex items-center justify-center"
+                            aria-label={`Increase ${item.name}`}
+                          >
+                            <Plus size={12} />
+                          </button>
+                        </div>
+                        <span className="text-white text-sm font-body">{item.name}</span>
+                      </div>
+                      <span className="text-daisy-gold text-sm font-accent font-semibold">
+                        +{formatCurrency(item.price)}{quantity > 0 ? ` × ${quantity} = ${formatCurrency(totalForItem)}` : ''}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </StepBlock>
+          )}
+
+          {catId === 'pizza' && step === 3 && activePizzaSize && (
+            <StepBlock title="Add Special Protein Options">
+              <div className="space-y-2">
+                {activePizzaSize.specials.map((item) => {
+                  const selected = pizzaSpecials.find((entry) => entry.id === item.id);
+                  const quantity = selected ? selected.quantity : 0;
+                  const totalForItem = item.price * quantity;
+
+                  return (
+                    <div key={item.id} className="flex items-center justify-between gap-3 rounded-xl bg-white/5 px-3 py-3">
+                      <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-2 rounded-full bg-white/10 p-1">
+                          <button
+                            type="button"
+                            onClick={() => updatePizzaSpecialQuantity(item, -1)}
+                            className="w-7 h-7 rounded-full bg-white/10 text-white flex items-center justify-center"
+                            aria-label={`Decrease ${item.name}`}
+                          >
+                            <Minus size={12} />
+                          </button>
+                          <span className="min-w-5 text-center text-white font-accent font-bold">{quantity}</span>
+                          <button
+                            type="button"
+                            onClick={() => updatePizzaSpecialQuantity(item, 1)}
+                            className="w-7 h-7 rounded-full bg-daisy-gold text-charcoal flex items-center justify-center"
+                            aria-label={`Increase ${item.name}`}
+                          >
+                            <Plus size={12} />
+                          </button>
+                        </div>
+                        <span className="text-white text-sm font-body">{item.name}</span>
+                      </div>
+                      <span className="text-daisy-gold text-sm font-accent font-semibold">
+                        +{formatCurrency(item.price)}{quantity > 0 ? ` × ${quantity} = ${formatCurrency(totalForItem)}` : ''}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
             </StepBlock>
           )}
 
