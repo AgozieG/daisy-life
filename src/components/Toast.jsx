@@ -6,7 +6,7 @@ const ICONS = { success: CheckCircle2, error: XCircle, info: Info, warning: Aler
 const STYLES = {
   success: 'bg-forest-green border-forest-green/50',
   error: 'bg-deep-red border-deep-red/50',
-  info: 'bg-charcoal-light border-daisy-gold/40',
+  info: 'bg-charcoal-light border-daisy-gold/40 text-charcoal',
   warning: 'bg-hot-orange border-hot-orange/50',
 };
 

@@ -15,13 +15,13 @@ export default function Home() {
   return (
     <div>
       {/* HERO */}
-      <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
+      <section className="hero-surface relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
         <img
           src="hero.jpg"
           alt="Daisy Life food spread"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/60 to-charcoal" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/75" />
 
         <span className="absolute text-5xl top-[18%] left-[10%] animate-float" style={{ animationDelay: '0s' }}>🍔</span>
         <span className="absolute text-5xl top-[28%] right-[12%] animate-float" style={{ animationDelay: '1s' }}>🌯</span>
@@ -52,7 +52,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="text-white/90 font-body text-base sm:text-lg mb-8"
           >
-            Enugu's boldest fast food — order in 60 seconds.
+            Made with love ❤️ · Enugu's boldest fast food — order in 60 seconds.
           </motion.p>
 
           <motion.div
@@ -120,11 +120,11 @@ export default function Home() {
               transition={{ delay: i * 0.06 }}
               whileHover={{ scale: 1.04 }}
               onClick={() => navigate(`/menu?category=${cat.id}`)}
-              className="relative h-32 sm:h-40 rounded-2xl overflow-hidden group text-left"
+              className="dark-card relative h-32 sm:h-40 rounded-2xl overflow-hidden group text-left"
               style={{ boxShadow: `0 0 0 1px ${cat.accentColour}33` }}
             >
               <img src={cat.products[0]?.image} alt={cat.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent" />
               <div className="absolute bottom-0 p-3">
                 <span className="text-2xl">{cat.emoji}</span>
                 <p className="font-accent font-bold text-white text-sm">{cat.name}</p>
@@ -132,6 +132,24 @@ export default function Home() {
               </div>
             </motion.button>
           ))}
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: menuData.categories.length * 0.06 }}
+            whileHover={{ scale: 1.04 }}
+            onClick={() => navigate('/create-your-plate?category=hotdog')}
+            className="dark-card relative h-32 sm:h-40 rounded-2xl overflow-hidden group text-left"
+            style={{ boxShadow: '0 0 0 1px #F4C54233' }}
+          >
+            <img src="/cat-burger.jpg" alt="Hotdog" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent" />
+            <div className="absolute bottom-0 p-3">
+              <span className="text-2xl">🌭</span>
+              <p className="font-accent font-bold text-white text-sm">Hotdog</p>
+              <p className="text-white/60 text-xs">Create your own</p>
+            </div>
+          </motion.button>
         </div>
       </section>
 

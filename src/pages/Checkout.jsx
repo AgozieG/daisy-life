@@ -142,15 +142,15 @@ export default function Checkout() {
 
   return (
     <div className="pt-24 pb-16 px-4 sm:px-6 max-w-5xl mx-auto min-h-screen">
-      <h1 className="font-display text-3xl font-bold text-white mb-6">Checkout</h1>
+      <h1 className="font-display text-3xl font-bold text-charcoal mb-6">Checkout</h1>
 
       <div className="flex items-center gap-2 mb-8">
         {STEPS.map((s, i) => (
           <div key={s} className="flex items-center flex-1">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-accent font-bold ${i <= step ? 'bg-daisy-gold text-charcoal' : 'bg-white/10 text-white/50'}`}>
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-accent font-bold ${i <= step ? 'bg-daisy-gold text-charcoal' : 'bg-white/10 text-charcoal/50'}`}>
               {i + 1}
             </div>
-            <span className={`ml-2 text-sm font-body hidden sm:inline ${i <= step ? 'text-white' : 'text-white/40'}`}>{s}</span>
+            <span className={`ml-2 text-sm font-body hidden sm:inline ${i <= step ? 'text-charcoal' : 'text-charcoal/40'}`}>{s}</span>
             {i < STEPS.length - 1 && <div className={`flex-1 h-0.5 mx-2 ${i < step ? 'bg-daisy-gold' : 'bg-white/10'}`} />}
           </div>
         ))}
@@ -162,17 +162,17 @@ export default function Checkout() {
             {step === 0 && (
               <motion.div key="review" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-3">
                 {cartItems.map((item) => (
-                  <div key={item.id} className="bg-charcoal-light rounded-xl p-4 flex gap-3">
+                  <div key={item.id} className="bg-charcoal-light border border-white/5 rounded-xl p-4 flex gap-3 shadow-sm">
                     <img src={item.image} alt={item.productName} className="w-16 h-16 rounded-lg object-cover" />
                     <div className="flex-1">
                       <div className="flex justify-between">
-                        <h4 className="text-white font-body font-semibold text-sm">{item.productName} × {item.quantity}</h4>
+                        <h4 className="text-charcoal font-body font-semibold text-sm">{item.productName} × {item.quantity}</h4>
                         <span className="text-daisy-gold font-accent font-bold text-sm">{formatCurrency(item.lineTotal)}</span>
                       </div>
-                      {item.selectedVariant && <p className="text-white/50 text-xs mt-1">Size: {item.selectedVariant}</p>}
-                      {item.selectedFlavours?.length > 0 && <p className="text-white/50 text-xs">Flavour: {item.selectedFlavours.join(', ')}</p>}
-                      {item.selectedToppings?.length > 0 && <p className="text-white/50 text-xs">Extras: {item.selectedToppings.map((t) => `${t.name}${Number(t.quantity || 1) > 1 ? ` × ${t.quantity}` : ''}`).join(', ')}</p>}
-                      {item.selectedDrink && <p className="text-white/50 text-xs">Drink: {item.selectedDrink}</p>}
+                      {item.selectedVariant && <p className="text-charcoal/50 text-xs mt-1">Size: {item.selectedVariant}</p>}
+                      {item.selectedFlavours?.length > 0 && <p className="text-charcoal/50 text-xs">Flavour: {item.selectedFlavours.join(', ')}</p>}
+                      {item.selectedToppings?.length > 0 && <p className="text-charcoal/50 text-xs">Extras: {item.selectedToppings.map((t) => `${t.name}${Number(t.quantity || 1) > 1 ? ` × ${t.quantity}` : ''}`).join(', ')}</p>}
+                      {item.selectedDrink && <p className="text-charcoal/50 text-xs">Drink: {item.selectedDrink}</p>}
                     </div>
                   </div>
                 ))}
@@ -184,13 +184,13 @@ export default function Checkout() {
 
             {step === 1 && (
               <motion.div key="delivery" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-5">
-                <div className="flex bg-white/5 rounded-full p-1">
+                <div className="flex bg-white/5 border border-white/5 rounded-full p-1">
                   {[{ id: 'pickup', label: 'Pickup', icon: Store }, { id: 'delivery', label: 'Delivery', icon: Truck }].map((opt) => (
                     <button
                       key={opt.id}
                       onClick={() => setDeliveryType(opt.id)}
                       className={`flex-1 py-2.5 rounded-full text-sm font-accent font-semibold flex items-center justify-center gap-2 transition-colors ${
-                        deliveryType === opt.id ? 'bg-daisy-gold text-charcoal' : 'text-white/60'
+                        deliveryType === opt.id ? 'bg-daisy-gold text-charcoal' : 'text-charcoal/60'
                       }`}
                     >
                       <opt.icon size={15} /> {opt.label}
@@ -199,22 +199,22 @@ export default function Checkout() {
                 </div>
 
                 {deliveryType === 'pickup' ? (
-                  <div className="bg-forest-green/15 border border-forest-green/40 rounded-xl p-4 text-sm font-body text-white/80">
-                    📍 Pick up at Sabbath Bus Stop, 7 Umueke St, New Haven, Enugu<br />
-                    ⏱️ Estimated ready time: ~15–20 minutes after order
+                  <div className="bg-forest-green/15 border border-forest-green/40 rounded-xl p-4 text-sm font-body text-charcoal/80">
+                    Pick up at Sabbath Bus Stop, 7 Umueke St, New Haven, Enugu<br />
+                    Estimated ready time: ~15–20 minutes after order
                   </div>
                 ) : (
                   <>
                     <div>
-                      <label className="block text-white/70 text-sm font-body mb-1.5">Delivery Location</label>
+                      <label className="block text-charcoal/70 text-sm font-body mb-1.5">Delivery Location</label>
                      <div className="relative">
                        <select
                          value={deliveryLocation}
                          onChange={(e) => setDeliveryLocation(e.target.value)}
-                         className="w-full appearance-none bg-charcoal-light border border-daisy-gold/60 rounded-2xl px-4 py-3 text-white text-sm font-body shadow-[0_0_0_1px_rgba(245,197,24,0.24)] focus:outline-none focus:ring-2 focus:ring-daisy-gold transition-all duration-200 hover:bg-white/8"
+                         className="w-full appearance-none bg-charcoal-light border border-daisy-gold/60 rounded-2xl px-4 py-3 text-charcoal text-sm font-body shadow-[0_0_0_1px_rgba(227,75,54,0.16)] focus:outline-none focus:ring-2 focus:ring-daisy-gold transition-all duration-200 hover:bg-white/8"
                        >
                          {Object.keys(DELIVERY_LOCATIONS).map((location) => (
-                           <option key={location} value={location} className="text-white bg-charcoal-light">
+                           <option key={location} value={location} className="text-charcoal bg-charcoal-light">
                              {location} — {formatCurrency(DELIVERY_LOCATIONS[location])}
                            </option>
                          ))}
@@ -227,7 +227,7 @@ export default function Checkout() {
                      </div>
                     </div>
                     <Field label="Delivery Address" value={address} onChange={setAddress} placeholder="Street, landmark, LGA" textarea />
-                    <p className="text-white/40 text-xs -mt-3 font-body">Delivery location fee is added automatically.</p>
+                    <p className="text-charcoal/50 text-xs -mt-3 font-body">Delivery location fee is added automatically.</p>
                     <Field label="Delivery Note (Optional)" value={deliveryNote} onChange={setDeliveryNote} placeholder="e.g. Gate is green, next to the pharmacy" />
                   </>
                 )}
@@ -246,15 +246,15 @@ export default function Checkout() {
 
             {step === 2 && (
               <motion.div key="pay" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-5">
-                <div className="bg-charcoal-light rounded-2xl p-5">
-                  <h3 className="font-accent font-bold text-white mb-3">Final Order Summary</h3>
+                <div className="bg-charcoal-light border border-white/5 rounded-2xl p-5">
+                  <h3 className="font-accent font-bold text-charcoal mb-3">Final Order Summary</h3>
                   {cartItems.map((item) => (
-                    <div key={item.id} className="flex justify-between text-sm font-body text-white/70 py-1">
+                    <div key={item.id} className="flex justify-between text-sm font-body text-charcoal/70 py-1">
                       <span>{item.productName} × {item.quantity}</span>
                       <span>{formatCurrency(item.lineTotal)}</span>
                     </div>
                   ))}
-                  <div className="border-t border-white/10 mt-3 pt-3 flex justify-between text-sm font-body text-white/70">
+                  <div className="border-t border-white/10 mt-3 pt-3 flex justify-between text-sm font-body text-charcoal/70">
                     <span>Delivery</span>
                     <span>{deliveryType === 'pickup' ? 'Free (Pickup)' : `${formatCurrency(deliveryFee)} · ${deliveryLocation}`}</span>
                   </div>
@@ -270,19 +270,19 @@ export default function Checkout() {
                 >
                   <Lock size={16} /> {isProcessing ? 'Confirming order…' : `Pay ${formatCurrency(grandTotal)} Now`}
                 </button>
-                <p className="text-white/40 text-xs text-center font-body">Payment secured by Paystack</p>
+                <p className="text-charcoal/50 text-xs text-center font-body">Payment secured by Paystack</p>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
 
         <div className="hidden lg:block">
-          <div className="sticky top-24 bg-charcoal-light rounded-2xl p-5 border border-white/5">
-            <h3 className="font-accent font-bold text-white mb-3">Order Total</h3>
-            <div className="flex justify-between text-sm text-white/70 font-body mb-2">
+          <div className="sticky top-24 bg-charcoal-light rounded-2xl p-5 border border-white/5 shadow-sm">
+            <h3 className="font-accent font-bold text-charcoal mb-3">Order Total</h3>
+            <div className="flex justify-between text-sm text-charcoal/70 font-body mb-2">
               <span>{cartItems.length} items</span><span>{formatCurrency(subtotal)}</span>
             </div>
-            <div className="flex justify-between text-sm text-white/70 font-body mb-2">
+            <div className="flex justify-between text-sm text-charcoal/70 font-body mb-2">
               <span>Delivery</span><span>{deliveryType === 'pickup' ? 'Free' : formatCurrency(deliveryFee)}</span>
             </div>
             <div className="border-t border-white/10 pt-2 flex justify-between font-accent font-bold text-daisy-gold">
@@ -294,8 +294,8 @@ export default function Checkout() {
 
       {isProcessing && (
         <div className="fixed inset-0 z-[95] bg-charcoal/95 backdrop-blur flex flex-col items-center justify-center">
-          <span className="inline-block text-6xl animate-[spin_6s_linear_infinite] rounded-full">🌼</span>
-          <p className="text-white font-body mt-4">Confirming your order…</p>
+          <img src="/daisylogo.PNG" alt="Daisy Life" className="w-20 h-20 object-contain animate-[spin_6s_linear_infinite] rounded-full" />
+          <p className="text-charcoal font-body mt-4">Confirming your order…</p>
         </div>
       )}
     </div>
@@ -305,14 +305,14 @@ export default function Checkout() {
 function Field({ label, value, onChange, placeholder, type = 'text', textarea }) {
   return (
     <div>
-      <label className="block text-white/70 text-sm font-body mb-1.5">{label}</label>
+      <label className="block text-charcoal/70 text-sm font-body mb-1.5">{label}</label>
       {textarea ? (
         <textarea
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
           rows={2}
-          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm font-body placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-daisy-gold resize-none"
+          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-charcoal text-sm font-body placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-daisy-gold resize-none"
         />
       ) : (
         <input
@@ -320,7 +320,7 @@ function Field({ label, value, onChange, placeholder, type = 'text', textarea })
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
-          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm font-body placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-daisy-gold"
+          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-charcoal text-sm font-body placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-daisy-gold"
         />
       )}
     </div>

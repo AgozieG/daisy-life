@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-daisy-gold: #F5C518;
-  --color-deep-red: #C0392B;
-  --color-forest-green: #1A7A4A;
-  --color-charcoal: #1A1A2E;
-  --color-charcoal-light: #23233d;
-  --color-off-white: #F9F5F0;
-  --color-hot-orange: #FF6B35;
+  --color-daisy-gold: #E34B36;
+  --color-deep-red: #B9322B;
+  --color-forest-green: #4D9A70;
+  --color-charcoal: #FFFDF9;
+  --color-charcoal-light: #FFFFFF;
+  --color-off-white: #FFFDF9;
+  --color-hot-orange: #F47A32;
 
   --font-display: "Playfair Display", serif;
   --font-body: "Poppins", sans-serif;
@@ -17,24 +17,73 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #F5C518 #1A1A2E;
+  scrollbar-color: #E34B36 #F3E9DF;
 }
 ::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: #1A1A2E; }
-::-webkit-scrollbar-thumb { background: #F5C518; border-radius: 8px; }
+::-webkit-scrollbar-track { background: #F3E9DF; }
+::-webkit-scrollbar-thumb { background: #E34B36; border-radius: 8px; }
 
 html {
   scroll-behavior: smooth;
   font-size: 17px;
 }
 body {
-  background: #1A1A2E;
-  color: #F9F5F0;
+  background: #FFFDF9;
+  color: #2F2723;
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
   letter-spacing: 0.01em;
   overflow-x: hidden;
+}
+
+/* The original palette used white text on charcoal surfaces. Keep the same
+   utility classes usable while making the site readable on light surfaces. */
+.text-white { color: #2F2723; }
+.text-charcoal { color: #2F2723; }
+.text-charcoal\/90 { color: rgb(47 39 35 / 0.9); }
+.text-charcoal\/80 { color: rgb(47 39 35 / 0.8); }
+.text-charcoal\/70 { color: rgb(47 39 35 / 0.7); }
+.text-charcoal\/60 { color: rgb(47 39 35 / 0.6); }
+.text-charcoal\/50 { color: rgb(47 39 35 / 0.5); }
+.text-charcoal\/40 { color: rgb(47 39 35 / 0.4); }
+.text-white\/90 { color: rgb(47 39 35 / 0.9); }
+.text-white\/80 { color: rgb(47 39 35 / 0.8); }
+.text-white\/70 { color: rgb(47 39 35 / 0.7); }
+.text-white\/60 { color: rgb(47 39 35 / 0.6); }
+.text-white\/50 { color: rgb(47 39 35 / 0.5); }
+.text-white\/40 { color: rgb(47 39 35 / 0.4); }
+.text-white\/30 { color: rgb(47 39 35 / 0.3); }
+.border-white\/5 { border-color: rgb(74 48 37 / 0.08); }
+.border-white\/10 { border-color: rgb(74 48 37 / 0.12); }
+.border-white\/15 { border-color: rgb(74 48 37 / 0.18); }
+.bg-white\/5 { background-color: rgb(74 48 37 / 0.04); }
+.bg-white\/10 { background-color: rgb(74 48 37 / 0.08); }
+.bg-white\/20 { background-color: rgb(74 48 37 / 0.14); }
+
+.hero-surface .text-white,
+.hero-surface .text-white\/90,
+.hero-surface .text-white\/80,
+.hero-surface .text-white\/70,
+.hero-surface .text-white\/60,
+.auth-hero .text-white,
+.auth-hero .text-white\/90,
+.auth-hero .text-white\/80,
+.auth-hero .text-white\/70,
+.auth-hero .text-white\/60 {
+  color: #FFFFFF !important;
+}
+.dark-card .text-white,
+.dark-card .text-white\/90,
+.dark-card .text-white\/80,
+.dark-card .text-white\/70,
+.dark-card .text-white\/60 {
+  color: #FFFFFF !important;
+}
+.bg-deep-red.text-white,
+.bg-forest-green.text-white,
+.bg-hot-orange.text-white {
+  color: #FFFFFF !important;
 }
 
 @layer base {
@@ -63,8 +112,8 @@ body {
 .animate-marquee { animation: marquee 22s linear infinite; }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(245,197,24,0.45); }
-  50% { box-shadow: 0 0 0 10px rgba(245,197,24,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(227,75,54,0.35); }
+  50% { box-shadow: 0 0 0 10px rgba(227,75,54,0); }
 }
 .animate-pulse-glow { animation: pulseGlow 2s ease-in-out infinite; }
 

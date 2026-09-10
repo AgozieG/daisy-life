@@ -34,7 +34,7 @@ export default function Cart() {
         {isCartOpen && (
           <>
             <motion.div
-              className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[70]"
+              className="fixed inset-0 bg-black/45 backdrop-blur-sm z-[70]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -45,10 +45,10 @@ export default function Cart() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', stiffness: 300, damping: 32 }}
-              className="fixed top-0 right-0 bottom-0 z-[75] w-full sm:w-[420px] bg-charcoal border-l border-white/10 flex flex-col"
+              className="fixed top-0 right-0 bottom-0 z-[75] w-full sm:w-[420px] bg-charcoal border-l border-white/10 flex flex-col shadow-2xl"
             >
               <div className="flex items-center justify-between p-5 border-b border-white/10">
-                <h2 className="font-display text-xl font-bold text-white">Your Order 🛒 · {itemCount} item{itemCount !== 1 ? 's' : ''}</h2>
+                <h2 className="font-display text-xl font-bold text-charcoal">Your Order · {itemCount} item{itemCount !== 1 ? 's' : ''}</h2>
                 <button onClick={() => setIsCartOpen(false)} className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center" aria-label="Close cart">
                   <X size={18} className="text-white" />
                 </button>
@@ -57,8 +57,8 @@ export default function Cart() {
               <div className="flex-1 overflow-y-auto p-4 space-y-3">
                 {cartItems.length === 0 ? (
                   <div className="h-full flex flex-col items-center justify-center text-center py-16">
-                    <div className="text-6xl mb-4 inline-block animate-[spin_6s_linear_infinite]">🌼</div>
-                    <p className="text-white/70 font-body mb-4">Your cart is feeling lonely 😔<br />Let's add some flavour!</p>
+                    <img src="/daisylogo.PNG" alt="Daisy Life" className="w-20 h-20 object-contain mb-4" />
+                    <p className="text-charcoal/70 font-body mb-4">Your cart is feeling lonely.<br />Let's add some flavour!</p>
                     <button
                       onClick={() => { setIsCartOpen(false); navigate('/menu'); }}
                       className="bg-daisy-gold text-charcoal font-accent font-bold px-5 py-2.5 rounded-full"

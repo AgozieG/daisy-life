@@ -16,7 +16,7 @@ const OrderSuccess = lazy(() => import('./pages/OrderSuccess'));
 function PageLoader() {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <span className="inline-block text-5xl animate-[spin_6s_linear_infinite] animate-pulse-glow rounded-full">🌼</span>
+      <img src="/daisylogo.PNG" alt="Daisy Life" className="w-16 h-16 object-contain animate-[spin_6s_linear_infinite] animate-pulse-glow rounded-full" />
     </div>
   );
 }
@@ -32,7 +32,7 @@ export default function App() {
   const hideChrome = location.pathname === '/auth';
 
   return (
-    <div className="min-h-screen bg-charcoal">
+    <div className="min-h-screen bg-charcoal text-charcoal">
       <ScrollToTop />
       {!hideChrome && <Navbar />}
       <main>

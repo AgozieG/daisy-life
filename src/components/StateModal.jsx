@@ -18,7 +18,7 @@ export default function StateModal() {
     <AnimatePresence>
       {showStateModal && (
         <motion.div
-          className="fixed inset-0 z-[90] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+          className="fixed inset-0 z-[90] flex items-center justify-center bg-black/45 backdrop-blur-sm p-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -33,12 +33,12 @@ export default function StateModal() {
             <div className="w-12 h-12 rounded-full bg-daisy-gold/20 flex items-center justify-center mb-4">
               <MapPin className="text-daisy-gold" size={22} />
             </div>
-            <h2 className="font-display text-2xl font-bold text-white mb-1">Where are you ordering from?</h2>
-            <p className="text-white/60 text-sm mb-4 font-body">This helps us confirm delivery to your area.</p>
+            <h2 className="font-display text-2xl font-bold text-charcoal mb-1">Where are you ordering from?</h2>
+            <p className="text-charcoal/60 text-sm mb-4 font-body">This helps us confirm delivery to your area.</p>
             <select
               value={selected}
               onChange={(e) => setSelected(e.target.value)}
-              className="w-full bg-charcoal border border-white/15 rounded-xl px-4 py-3 text-white font-body focus:outline-none focus:ring-2 focus:ring-daisy-gold"
+              className="w-full bg-charcoal border border-white/15 rounded-xl px-4 py-3 text-charcoal font-body focus:outline-none focus:ring-2 focus:ring-daisy-gold"
             >
               {NIGERIAN_STATES.map((s) => (
                 <option key={s} value={s}>{s}</option>

@@ -32,8 +32,8 @@ export default function ProductCard({ product, onSelect, index = 0 }) {
         )}
       </div>
       <div className="p-4 sm:p-5 flex flex-col flex-1">
-        <h3 className="font-body font-semibold text-white text-[17px] sm:text-[19px] leading-tight mb-2">{product.name}</h3>
-        <p className="text-white/60 text-sm sm:text-[15px] font-body mb-3 line-clamp-2 flex-1">{product.tagline}</p>
+        <h3 className="font-body font-semibold text-charcoal text-[17px] sm:text-[19px] leading-tight mb-2">{product.name}</h3>
+        <p className="text-charcoal/60 text-sm sm:text-[15px] font-body mb-3 line-clamp-2 flex-1">{product.tagline}</p>
         <div className="flex items-center justify-between mb-3">
           <span className="font-accent font-bold text-daisy-gold text-xl sm:text-[1.35rem]">{priceLabel}</span>
         </div>

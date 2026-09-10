@@ -6,10 +6,10 @@ export default function BottomNav() {
   const { itemCount, setIsCartOpen } = useCart();
 
   const linkClass = ({ isActive }) =>
-    `flex flex-col items-center gap-0.5 text-[10px] font-body py-1 ${isActive ? 'text-daisy-gold' : 'text-white/60'}`;
+    `flex flex-col items-center gap-0.5 text-[10px] font-body py-1 ${isActive ? 'text-daisy-gold' : 'text-charcoal/60'}`;
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-charcoal/95 backdrop-blur-lg border-t border-white/10 flex justify-around items-center px-2 py-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))]">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-charcoal/95 backdrop-blur-lg border-t border-white/10 flex justify-around items-center px-2 py-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] shadow-[0_-4px_18px_rgba(74,48,37,0.08)]">
       <NavLink to="/" className={linkClass} end>
         <Home size={20} />
         Home
@@ -22,7 +22,7 @@ export default function BottomNav() {
         <Sparkles size={20} />
         Create
       </NavLink>
-      <button onClick={() => setIsCartOpen(true)} className="relative flex flex-col items-center gap-0.5 text-[10px] font-body text-white/60">
+      <button onClick={() => setIsCartOpen(true)} className="relative flex flex-col items-center gap-0.5 text-[10px] font-body text-charcoal/60">
         <ShoppingBag size={20} />
         Cart
         {itemCount > 0 && (

@@ -4998,6 +4998,382 @@
           "available": true
         }
       ]
+    },
+    {
+      "id": "box-of-happiness",
+      "name": "Box of Happiness",
+      "emoji": "🍔",
+      "accentColour": "#F4C542",
+      "description": "Shareable burgers, shawarma, wings and chips",
+      "products": [
+        {
+          "id": "party-happiness-box",
+          "name": "Party Happiness Box",
+          "tagline": "Ideal for groups and hangouts",
+          "description": "Beef burger, 3 samosas, 3 spring rolls, 10 crunchy wings, chips and ketchup.",
+          "basePrice": 17500,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [
+            "Best Seller"
+          ],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-crunchy-wings",
+              "name": "4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "extra-beef-burger",
+              "name": "Extra Beef Burger",
+              "price": 3800
+            },
+            {
+              "id": "extra-shawarma",
+              "name": "Extra Shawarma",
+              "price": 4000
+            },
+            {
+              "id": "drink-addon",
+              "name": "Drink",
+              "price": 1000
+            },
+            {
+              "id": "extra-sauce",
+              "name": "Extra Sauce",
+              "price": 500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Zobo",
+            "Milkshake (Vanilla)",
+            "Milkshake (Strawberry)",
+            "Milkshake (Chocolate)",
+            "Chivita Exotic (Pineapple & Coconut) (Big)"
+          ],
+          "available": true
+        },
+        {
+          "id": "friends-chops-box",
+          "name": "Friends Chops Box",
+          "tagline": "Huge value for 2-3 people",
+          "description": "Beef burger, shredded beef hotdog, beef shawarma, chips and ketchup.",
+          "basePrice": 13500,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [
+            "Huge Value"
+          ],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-crunchy-wings",
+              "name": "4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "extra-beef-burger",
+              "name": "Extra Beef Burger",
+              "price": 3800
+            },
+            {
+              "id": "extra-shawarma",
+              "name": "Extra Shawarma",
+              "price": 4000
+            },
+            {
+              "id": "drink-addon",
+              "name": "Drink",
+              "price": 1000
+            },
+            {
+              "id": "extra-sauce",
+              "name": "Extra Sauce",
+              "price": 500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Zobo",
+            "Milkshake (Vanilla)",
+            "Milkshake (Strawberry)",
+            "Milkshake (Chocolate)",
+            "Chivita Exotic (Pineapple & Coconut) (Big)"
+          ],
+          "available": true
+        },
+        {
+          "id": "chicken-lovers-box",
+          "name": "Chicken Lovers Box",
+          "tagline": "Chicken all the way",
+          "description": "Chicken burger, shredded chicken hotdog, chicken shawarma, chips and ketchup.",
+          "basePrice": 15500,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-crunchy-wings",
+              "name": "4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "extra-beef-burger",
+              "name": "Extra Beef Burger",
+              "price": 3800
+            },
+            {
+              "id": "extra-shawarma",
+              "name": "Extra Shawarma",
+              "price": 4000
+            },
+            {
+              "id": "drink-addon",
+              "name": "Drink",
+              "price": 1000
+            },
+            {
+              "id": "extra-sauce",
+              "name": "Extra Sauce",
+              "price": 500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Zobo",
+            "Milkshake (Vanilla)",
+            "Milkshake (Strawberry)",
+            "Milkshake (Chocolate)",
+            "Chivita Exotic (Pineapple & Coconut) (Big)"
+          ],
+          "available": true
+        },
+        {
+          "id": "solo-happiness-box-beef",
+          "name": "Solo Happiness Box (Beef)",
+          "tagline": "Quick and filling",
+          "description": "Beef burger, shredded beef hotdog, chips and ketchup.",
+          "basePrice": 10500,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableExtras": [
+            {
+              "id": "extra-crunchy-wings",
+              "name": "4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "extra-beef-burger",
+              "name": "Extra Beef Burger",
+              "price": 3800
+            },
+            {
+              "id": "extra-shawarma",
+              "name": "Extra Shawarma",
+              "price": 4000
+            },
+            {
+              "id": "drink-addon",
+              "name": "Drink",
+              "price": 1000
+            },
+            {
+              "id": "extra-sauce",
+              "name": "Extra Sauce",
+              "price": 500
+            }
+          ],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Zobo",
+            "Milkshake (Vanilla)",
+            "Milkshake (Strawberry)",
+            "Milkshake (Chocolate)",
+            "Chivita Exotic (Pineapple & Coconut) (Big)"
+          ],
+          "available": true
+        },
+        {
+          "id": "solo-happiness-box-chicken",
+          "name": "Solo Happiness Box (Chicken)",
+          "tagline": "Light but satisfying",
+          "description": "Chicken burger, shredded chicken hotdog, chips and ketchup.",
+          "basePrice": 11500,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": true,
+          "availableDrinks": [
+            "Zobo",
+            "Milkshake (Vanilla)",
+            "Milkshake (Strawberry)",
+            "Milkshake (Chocolate)",
+            "Chivita Exotic (Pineapple & Coconut) (Big)"
+          ],
+          "hasDrinkOption": true,
+          "available": true,
+          "availableExtras": [
+            {
+              "id": "extra-crunchy-wings",
+              "name": "4 Crunchy Wings",
+              "price": 4000
+            },
+            {
+              "id": "extra-beef-burger",
+              "name": "Extra Beef Burger",
+              "price": 3800
+            },
+            {
+              "id": "extra-shawarma",
+              "name": "Extra Shawarma",
+              "price": 4000
+            },
+            {
+              "id": "drink-addon",
+              "name": "Drink",
+              "price": 1000
+            },
+            {
+              "id": "extra-sauce",
+              "name": "Extra Sauce",
+              "price": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breakfast-box",
+      "name": "Breakfast Box",
+      "emoji": "🍳",
+      "accentColour": "#F4C542",
+      "description": "Warm breakfast boxes and build-your-own plates",
+      "products": [
+        {
+          "id": "full-breakfast",
+          "name": "Full Breakfast",
+          "tagline": "A complete breakfast to start your day",
+          "description": "Waffles, pancake, scrambled egg, baked beans, sausages, syrup and fresh juice.",
+          "basePrice": 15000,
+          "image": "/cat-dine-boxes.jpg",
+          "badges": [
+            "Full Breakfast"
+          ],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": false,
+          "availableExtras": [],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Tea",
+            "Coffee",
+            "Fresh Juice",
+            "Milkshake",
+            "Water"
+          ],
+          "available": true
+        },
+        {
+          "id": "easy-breakfast",
+          "name": "Easy Breakfast",
+          "tagline": "Light but satisfying",
+          "description": "Waffles, pancake, scrambled eggs, sausage and syrup.",
+          "basePrice": 7800,
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": false,
+          "availableExtras": [],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Tea",
+            "Coffee",
+            "Fresh Juice",
+            "Milkshake",
+            "Water"
+          ],
+          "available": true
+        },
+        {
+          "id": "sandwich-breakfast",
+          "name": "Sandwich Breakfast",
+          "tagline": "Sandwich, fries and juice",
+          "description": "Sandwich, fries and juice.",
+          "basePrice": 10000,
+          "badges": [],
+          "supportsCreateYourPlate": false,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": false,
+          "availableExtras": [],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Tea",
+            "Coffee",
+            "Fresh Juice",
+            "Milkshake",
+            "Water"
+          ],
+          "available": true
+        },
+        {
+          "id": "waffle-pancake-breakfast",
+          "name": "Waffle / Pancake Breakfast",
+          "tagline": "Choose waffles or pancake with breakfast favourites",
+          "description": "Pancake or waffles, scrambled egg, sausage, fresh juice and syrup.",
+          "basePrice": 10000,
+          "badges": [],
+          "supportsCreateYourPlate": true,
+          "hasVariants": false,
+          "variants": [],
+          "hasFlavours": false,
+          "availableFlavours": [],
+          "hasExtras": false,
+          "availableExtras": [],
+          "hasDrinkOption": true,
+          "availableDrinks": [
+            "Tea",
+            "Coffee",
+            "Fresh Juice",
+            "Milkshake",
+            "Water"
+          ],
+          "available": true
+        }
+      ]
     }
   ]
 }

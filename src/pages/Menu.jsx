@@ -1,10 +1,18 @@
 import { useState, useMemo, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import menuData from '../data/menu.json';
 import ProductCard from '../components/ProductCard';
 import ProductModal from '../components/ProductModal';
 import LoadingSkeleton from '../components/LoadingSkeleton';
+
+const CREATE_PLATE_CATEGORIES = {
+  'small-chops': 'Create Your Small Chops',
+  'pizza': 'Create Your Pizza',
+  'loaded-fries': 'Create Your Loaded Fries',
+  'breakfast-box': 'Create Your Breakfast Plate',
+  'hotdog': 'Create Your Hotdog',
+};
 
 export default function Menu() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -13,6 +21,7 @@ export default function Menu() {
   const [query, setQuery] = useState('');
   const [selected, setSelected] = useState(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 350);
@@ -34,9 +43,19 @@ export default function Menu() {
 
   return (
     <div className="pt-24 pb-24 md:pb-16 px-4 sm:px-6 max-w-7xl mx-auto min-h-screen">
-      <h1 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">Our Menu</h1>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+        <h1 className="font-display text-4xl sm:text-5xl font-bold text-charcoal">Our Menu</h1>
+        {CREATE_PLATE_CATEGORIES[activeCategory] && (
+          <button
+            onClick={() => navigate(`/create-your-plate?category=${activeCategory}`)}
+            className="bg-daisy-gold text-charcoal font-accent font-bold px-5 py-3 rounded-full hover:brightness-105 active:scale-95 transition-all"
+          >
+            {CREATE_PLATE_CATEGORIES[activeCategory]} →
+          </button>
+        )}
+      </div>
 
-      <div className="sticky top-16 z-30 bg-charcoal/95 backdrop-blur-lg -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 mb-6">
+      <div className="sticky top-16 z-30 bg-charcoal/95 backdrop-blur-lg -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 mb-6 shadow-sm">
         <div className="flex gap-2 overflow-x-auto no-scrollbar pb-3">
           {menuData.categories.map((cat) => (
             <button
@@ -49,20 +68,26 @@ export default function Menu() {
               {cat.emoji} {cat.name}
             </button>
           ))}
+          <button
+            onClick={() => navigate('/create-your-plate?category=hotdog')}
+            className="shrink-0 px-5 py-2.5 rounded-full text-base font-body font-medium whitespace-nowrap bg-white/10 text-white/70 hover:bg-white/20"
+          >
+            🌭 Create Your Hotdog
+          </button>
         </div>
 
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" size={18} />
+           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-charcoal/40" size={18} />
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={`Search ${category.name}...`}
-            className="w-full bg-white/5 border border-white/10 rounded-full pl-11 pr-4 py-3 text-white text-base font-body placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-daisy-gold"
+            className="w-full bg-white/5 border border-white/10 rounded-full pl-11 pr-4 py-3 text-charcoal text-base font-body placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-daisy-gold"
           />
         </div>
       </div>
 
-      <p className="text-white/50 text-base font-body mb-4">
+      <p className="text-charcoal/60 text-base font-body mb-4">
         {loading ? 'Loading...' : `Showing ${filteredProducts.length} result${filteredProducts.length !== 1 ? 's' : ''} in ${category.name}`}
       </p>
 
@@ -71,7 +96,7 @@ export default function Menu() {
       ) : filteredProducts.length === 0 ? (
         <div className="text-center py-20">
           <p className="text-5xl mb-4">🤔</p>
-          <p className="text-white/60 font-body">Hmm, we couldn't find that. Try a different search.</p>
+          <p className="text-charcoal/60 font-body">Hmm, we couldn't find that. Try a different search.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">

@@ -28,11 +28,11 @@ export default function Auth() {
 
   return (
     <div className="min-h-screen flex">
-      <div className="hidden lg:flex w-1/2 relative overflow-hidden">
+      <div className="auth-hero hidden lg:flex w-1/2 relative overflow-hidden">
         <img src="hero.jpg" alt="Daisy Life food" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/55 to-black/25" />
         <div className="relative z-10 flex flex-col justify-end p-12">
-          <span className="inline-block text-6xl mb-4 animate-[spin_6s_linear_infinite]">🌼</span>
+           <img src="/daisylogo.PNG" alt="Daisy Life" className="w-20 h-20 object-contain mb-4" />
           <h2 className="font-display text-4xl font-bold text-white mb-3">Life Tastes Better at Daisy</h2>
           <p className="text-white/70 font-body">"Meals are so nice and the plating is second to none." — Mercy N.</p>
         </div>
@@ -41,17 +41,17 @@ export default function Auth() {
       <div className="flex-1 flex items-center justify-center px-6 py-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-sm">
           <div className="text-center mb-8">
-            <span className="text-4xl">🌼</span>
-            <h1 className="font-display text-2xl font-bold text-white mt-2">Welcome to Daisy Life</h1>
+            <img src="/daisylogo.PNG" alt="Daisy Life" className="w-14 h-14 object-contain mx-auto" />
+            <h1 className="font-display text-2xl font-bold text-charcoal mt-2">Welcome to Daisy Life</h1>
           </div>
 
-          <div className="flex bg-white/5 rounded-full p-1 mb-6">
+          <div className="flex bg-white/5 border border-white/5 rounded-full p-1 mb-6">
             {['signup', 'login'].map((m) => (
               <button
                 key={m}
                 onClick={() => setMode(m)}
                 className={`flex-1 py-2 rounded-full text-sm font-accent font-semibold transition-colors ${
-                  mode === m ? 'bg-daisy-gold text-charcoal' : 'text-white/60'
+                  mode === m ? 'bg-daisy-gold text-charcoal' : 'text-charcoal/60'
                 }`}
               >
                 {m === 'signup' ? 'Sign Up' : 'Log In'}
@@ -60,7 +60,7 @@ export default function Auth() {
           </div>
 
           <div className="mb-5">
-            <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-center text-xs text-white/70 font-body">
+            <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-center text-xs text-charcoal/70 font-body">
               Use your email and password to continue.
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Auth() {
                 value={form.password}
                 onChange={(v) => setForm({ ...form, password: v })}
               />
-              <button type="button" onClick={() => setShowPass((s) => !s)} className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40">
+              <button type="button" onClick={() => setShowPass((s) => !s)}               className="absolute right-3 top-1/2 -translate-y-1/2 text-charcoal/40">
                 {showPass ? <EyeOff size={16} /> : <Eye size={16} />}
               </button>
             </div>
@@ -106,7 +106,7 @@ function Input({ type = 'text', placeholder, value, onChange }) {
       value={value}
       onChange={(e) => onChange(e.target.value)}
       required
-      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm font-body placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-daisy-gold"
+      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-charcoal text-sm font-body placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-daisy-gold"
     />
   );
 }

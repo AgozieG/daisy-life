@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { Check, Minus, Plus } from 'lucide-react';
@@ -7,7 +8,7 @@ import { formatCurrency } from '../utils/formatCurrency';
 import { useCart } from '../hooks/useCart';
 import { useToast } from '../hooks/useToast';
 
-const ELIGIBLE = ['loaded-fries', 'small-chops', 'pizza', 'hotdog'];
+const ELIGIBLE = ['loaded-fries', 'small-chops', 'pizza', 'hotdog', 'breakfast-box'];
 
 const NO_SELECTION = { id: 'none', name: 'None', price: 0 };
 
@@ -152,6 +153,30 @@ const DRINK_OPTIONS = [
   { name: 'Chivita Exotic (Pineapple & Coconut) (Big)', price: 2500 },
 ];
 
+const BREAKFAST_ITEMS = [
+  { id: 'waffle', name: 'Waffle (4)', price: 4500 },
+  { id: 'pancake', name: 'Pancake (4)', price: 4000 },
+  { id: 'scrambled-egg', name: 'Scrambled Egg', price: 2500 },
+  { id: 'fried-egg', name: 'Fried Egg', price: 2000 },
+  { id: 'baked-beans-big', name: 'Baked Beans (Big)', price: 1500 },
+  { id: 'baked-beans-small', name: 'Baked Beans (Small)', price: 1000 },
+  { id: 'sausage', name: 'Sausage', price: 700 },
+  { id: 'sandwich', name: 'Sandwich', price: 4500 },
+  { id: 'toast', name: 'Toast', price: 2000 },
+  { id: 'chips', name: 'Chips', price: 2500 },
+  { id: 'crunchy-wings', name: 'Crunchy Wings (4)', price: 4000 },
+  { id: 'apple', name: 'Apple', price: 700 },
+  { id: 'syrup', name: 'Syrup', price: 500 },
+];
+
+const BREAKFAST_DRINKS = [
+  { name: 'Tea', price: 1500 },
+  { name: 'Coffee', price: 1500 },
+  { name: 'Fresh Juice', price: 2500 },
+  { name: 'Milkshake', price: 2500 },
+  { name: 'Water', price: 500 },
+];
+
 function getDrinkSummary(drinks) {
   return drinks
     .filter((drink) => drink && drink.quantity > 0)
@@ -160,7 +185,9 @@ function getDrinkSummary(drinks) {
 }
 
 export default function CreateYourPlate() {
-  const [catId, setCatId] = useState('loaded-fries');
+  const [searchParams] = useSearchParams();
+  const requestedCategory = searchParams.get('category');
+  const [catId, setCatId] = useState(ELIGIBLE.includes(requestedCategory) ? requestedCategory : 'loaded-fries');
   const [step, setStep] = useState(0);
   const [size, setSize] = useState(null);
   const [base, setBase] = useState(null);
@@ -176,6 +203,7 @@ export default function CreateYourPlate() {
   const [pizzaBase, setPizzaBase] = useState(null);
   const [pizzaToppings, setPizzaToppings] = useState([]);
   const [pizzaSpecials, setPizzaSpecials] = useState([]);
+  const [breakfastItems, setBreakfastItems] = useState([]);
   const { addItem } = useCart();
   const { showToast } = useToast();
 
@@ -191,6 +219,8 @@ export default function CreateYourPlate() {
       ? ['Pack', 'Content', 'Protein', 'Drinks']
       : catId === 'hotdog'
         ? ['Hotdog', 'Pick a Side', 'Make It a Combo', 'Select Drinks']
+        : catId === 'breakfast-box'
+          ? ['Choose Items', 'Select Drinks']
         : ['Size', 'Base', 'Protein & Toppings', 'Special Protein Options', 'Select Drinks'];
 
   const activeBase = LOADED_FRIES_BASES.find((item) => item.id === base) || null;
@@ -208,6 +238,7 @@ export default function CreateYourPlate() {
   const smallChopsContentTotal = contents.reduce((sum, item) => sum + item.price, 0);
   const proteinTotal = proteins.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const drinkTotal = drinks.reduce((sum, drink) => sum + drink.price * drink.quantity, 0);
+  const breakfastItemsTotal = breakfastItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const selectedProteinCount = proteins.reduce((sum, item) => sum + item.quantity, 0);
 
   const total = useMemo(() => {
@@ -217,9 +248,10 @@ export default function CreateYourPlate() {
       return pack.price + smallChopsContentTotal + proteinTotal + drinkTotal;
     }
     if (catId === 'hotdog') return hotdogPrice + drinkTotal;
+    if (catId === 'breakfast-box') return breakfastItemsTotal + drinkTotal;
     if (!pizzaSize) return 0;
     return (activePizzaSize ? activePizzaSize.price : 0) + pizzaBasePrice + pizzaToppingTotal + pizzaSpecialTotal + drinkTotal;
-  }, [catId, loadedFriesPrice, pack, smallChopsContentTotal, proteinTotal, drinkTotal, hotdogPrice, pizzaSize, activePizzaSize, pizzaBasePrice, pizzaToppingTotal, pizzaSpecialTotal]);
+  }, [catId, loadedFriesPrice, pack, smallChopsContentTotal, proteinTotal, drinkTotal, hotdogPrice, breakfastItemsTotal, pizzaSize, activePizzaSize, pizzaBasePrice, pizzaToppingTotal, pizzaSpecialTotal]);
 
   const clearSelectionsForStep = (targetStep) => {
     if (targetStep === 0) {
@@ -240,6 +272,7 @@ export default function CreateYourPlate() {
     if (targetStep === 3) {
       setDrinks([]);
       setPizzaSpecials([]);
+      setBreakfastItems([]);
     }
   };
 
@@ -259,6 +292,7 @@ export default function CreateYourPlate() {
     setPizzaBase(null);
     setPizzaToppings([]);
     setPizzaSpecials([]);
+    setBreakfastItems([]);
     setMultiplier(1);
   };
 
@@ -266,13 +300,24 @@ export default function CreateYourPlate() {
     setDrinks((prev) => {
       const existing = prev.find((item) => item.name === drinkName);
       if (!existing) {
-        const drink = DRINK_OPTIONS.find((item) => item.name === drinkName);
+        const drinkList = catId === 'breakfast-box' ? BREAKFAST_DRINKS : DRINK_OPTIONS;
+        const drink = drinkList.find((item) => item.name === drinkName);
         if (!drink) return prev;
         return [...prev, { ...drink, quantity: Math.max(1, delta) }];
       }
       const nextQuantity = Math.max(0, existing.quantity + delta);
       if (nextQuantity === 0) return prev.filter((item) => item.name !== drinkName);
       return prev.map((item) => (item.name === drinkName ? { ...item, quantity: nextQuantity } : item));
+    });
+  };
+
+  const updateBreakfastItemQuantity = (item, delta) => {
+    setBreakfastItems((prev) => {
+      const existing = prev.find((entry) => entry.id === item.id);
+      const nextQuantity = Math.max(0, (existing?.quantity || 0) + delta);
+      if (nextQuantity === 0) return prev.filter((entry) => entry.id !== item.id);
+      if (existing) return prev.map((entry) => (entry.id === item.id ? { ...entry, quantity: nextQuantity } : entry));
+      return [...prev, { ...item, quantity: nextQuantity }];
     });
   };
 
@@ -357,6 +402,8 @@ export default function CreateYourPlate() {
       return true;
     }
 
+    if (catId === 'breakfast-box') return step === 0 ? breakfastItems.length > 0 : true;
+
     if (catId === 'pizza') {
       if (step === 0) return !!pizzaSize;
       if (step === 1) return !!pizzaBase;
@@ -389,6 +436,11 @@ export default function CreateYourPlate() {
       extras = [...hotdogSides, ...hotdogCombos];
       basePriceForCart = hotdogPrice;
       selectedVariant = `${hotdogChoice?.name || 'Hotdog'} · ${hotdogSides.length ? hotdogSides.map((item) => item.name).join(', ') : 'No side'} · ${hotdogCombos.length ? hotdogCombos.map((item) => item.name).join(', ') : 'No combo'}`;
+    } else if (catId === 'breakfast-box') {
+      customLabel = 'Create Your Breakfast Plate';
+      extras = breakfastItems;
+      basePriceForCart = breakfastItemsTotal;
+      selectedVariant = breakfastItems.map((item) => `${item.name} × ${item.quantity}`).join(', ');
     } else {
       customLabel = `Custom Pizza — ${activePizzaSize?.name || 'Pizza'}`;
       extras = [...pizzaToppings.filter((item) => item.quantity > 0), ...pizzaSpecials.filter((item) => item.quantity > 0)];
@@ -415,7 +467,7 @@ export default function CreateYourPlate() {
       lineTotal: safeTotal,
     });
 
-    confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 }, colors: ['#F5C518', '#C0392B', '#1A7A4A'] });
+    confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 }, colors: ['#E34B36', '#B9322B', '#4D9A70', '#F47A32'] });
     showToast(`${customLabel} added to cart!`, 'success');
     switchCategory(catId);
   };
@@ -430,8 +482,8 @@ export default function CreateYourPlate() {
         {ELIGIBLE.map((id) => {
           const c = menuData.categories.find((cat) => cat.id === id) || {
             id,
-            name: id === 'hotdog' ? 'Hotdog' : id === 'pizza' ? 'Pizza' : 'Custom Plate',
-            emoji: id === 'hotdog' ? '🌭' : id === 'pizza' ? '🍕' : '🍽️',
+            name: id === 'hotdog' ? 'Hotdog' : id === 'pizza' ? 'Pizza' : id === 'breakfast-box' ? 'Breakfast Box' : 'Custom Plate',
+            emoji: id === 'hotdog' ? '🌭' : id === 'pizza' ? '🍕' : id === 'breakfast-box' ? '🍳' : '🍽️',
           };
           return (
             <button
@@ -882,6 +934,28 @@ export default function CreateYourPlate() {
             </StepBlock>
           )}
 
+          {catId === 'breakfast-box' && step === 0 && (
+            <StepBlock title="Choose what you want in your breakfast box">
+              <div className="space-y-2">
+                {BREAKFAST_ITEMS.map((item) => {
+                  const selected = breakfastItems.find((entry) => entry.id === item.id);
+                  const quantity = selected?.quantity || 0;
+                  return (
+                    <div key={item.id} className="flex items-center justify-between gap-3 rounded-xl bg-white/5 px-3 py-3">
+                      <span className="text-white text-sm font-body">{item.name}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-daisy-gold text-xs font-accent">{formatCurrency(item.price)}</span>
+                        <button type="button" onClick={() => updateBreakfastItemQuantity(item, -1)} className="w-7 h-7 rounded-full bg-white/10 text-white flex items-center justify-center" aria-label={`Decrease ${item.name}`}><Minus size={12} /></button>
+                        <span className="min-w-5 text-center text-white font-accent font-bold">{quantity}</span>
+                        <button type="button" onClick={() => updateBreakfastItemQuantity(item, 1)} className="w-7 h-7 rounded-full bg-daisy-gold text-charcoal flex items-center justify-center" aria-label={`Increase ${item.name}`}><Plus size={12} /></button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </StepBlock>
+          )}
+
           {step === steps.length - 1 && (
             <StepBlock title="🥤 Select Drinks">
               <div className="mb-4 rounded-xl border border-daisy-gold/40 bg-daisy-gold/10 p-3 text-sm">
@@ -893,7 +967,7 @@ export default function CreateYourPlate() {
               </div>
 
               <div className="space-y-3">
-                {DRINK_OPTIONS.map((drink) => {
+                {(catId === 'breakfast-box' ? BREAKFAST_DRINKS : DRINK_OPTIONS).map((drink) => {
                   const selected = drinks.find((item) => item.name === drink.name);
                   const quantity = selected ? selected.quantity : 0;
                   return (
